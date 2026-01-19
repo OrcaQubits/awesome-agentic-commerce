@@ -1,0 +1,73 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.code-workspace
+
+# Node.js (if tooling is added)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.yarn
+
+# Python (if scripts are added)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+.python-version
+
+# Build outputs
+dist/
+build/
+out/
+_site/
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Claude Code
+.claude/
