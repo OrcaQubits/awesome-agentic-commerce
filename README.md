@@ -329,6 +329,7 @@ Merchants wanting maximum reach may implement both.
 
 - [Awesome UCP](https://github.com/Upsonic/awesome-ucp) - Curated UCP resources
 - [Awesome Agentic Patterns](https://github.com/nibzard/awesome-agentic-patterns) - Agentic AI patterns
+- [Awesome Agentic Commerce](https://github.com/damoahdominic/awesome-agentic-commerce/) - Agentic commerce protocols resources
 
 ### 🌐 Community Sites
 
