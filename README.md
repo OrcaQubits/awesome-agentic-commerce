@@ -15,6 +15,7 @@ This repository is a **reference point** to official resources. It does not own 
 - [Developer Tools](#developer-tools)
 - [Related Technologies](#related-technologies)
 - [Learning Resources](#learning-resources)
+  - [Major Platform Announcements (January 2026)](#-major-platform-announcements-january-2026)
 - [Community Resources](#community-resources)
 - [Adopters & Partners](#adopters--partners)
 
@@ -78,6 +79,8 @@ UCP is "the common language for platforms, agents, and businesses." It defines b
 - [Under the Hood: UCP](https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/) - Google Developers Blog
 - [Agentic Commerce Tools](https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/) - Google Blog
 - [Shopify: AI Commerce at Scale](https://www.shopify.com/news/ai-commerce-at-scale) - Shopify announcement
+- [Gemini Enterprise for CX](https://cloud.google.com/transform/a-new-era-agentic-commerce-retail-ai) - Google Cloud agentic retail platform
+- [NRF 2026: The AI Platform Shift](https://blog.google/company-news/inside-google/message-ceo/nrf-2026-remarks/) - Google CEO remarks at NRF 2026
 
 <br>
 
@@ -320,6 +323,31 @@ Merchants wanting maximum reach may implement both.
 - [FinTech Magazine: AP2](https://fintechmagazine.com/news/agentic-pay-systems-googles-agent-payments-protocol) - AP2 coverage
 - [MarkTechPost: UCP](https://www.marktechpost.com/2026/01/12/google-ai-releases-universal-commerce-protocol-ucp-an-open-source-standard-designed-to-power-the-next-generation-of-agentic-commerce/) - Technical coverage
 - [SEJ: ACP & UCP for SEO](https://www.searchenginejournal.com/agentic-commerce-what-seos-need-to-consider-acp-ucp/563503/) - SEO considerations
+- [Marketing Brew: CES & NRF Announcements](https://www.marketingbrew.com/stories/2026/01/16/agentic-ai-announcements-ces-nrf) - Major agentic AI announcements roundup
+- [Modern Retail: AI Shopping Agent Wars](https://www.modernretail.co/technology/why-the-ai-shopping-agent-wars-will-heat-up-in-2026/) - 2026 industry outlook
+- [Commercetools: AI Trends Shaping Agentic Commerce](https://commercetools.com/blog/ai-trends-shaping-agentic-commerce) - 7 AI trends for 2026
+- [Ecommerce Times: Unified Platforms & Agentic AI](https://www.ecommercetimes.com/story/unified-platforms-and-agentic-ai-will-define-e-commerce-in-2026-178463.html) - 2026 e-commerce outlook
+
+### 🏢 Major Platform Announcements (January 2026)
+
+#### Google
+- [A New Era of Agentic Commerce](https://cloud.google.com/transform/a-new-era-agentic-commerce-retail-ai) - Google Cloud Blog on retail AI
+- [Gemini Enterprise for CX](https://www.googlecloudpresscorner.com/2026-01-11-Google-Cloud-Brings-Shopping-and-Customer-Service-Together-with-Gemini-Enterprise-for-Customer-Experience) - Official press release
+- [NRF 2026 Remarks](https://blog.google/company-news/inside-google/message-ceo/nrf-2026-remarks/) - Google CEO message on AI platform shift
+- [CNBC: Google Bets on AI-Powered Retail](https://www.cnbc.com/2026/01/11/google-launches-universal-commerce-protocol-bets-on-ai-powered-retail.html) - UCP launch coverage
+
+#### Microsoft
+- [Microsoft Agentic AI for Retail](https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/) - Official announcement on Copilot Checkout, Brand Agents, and Dynamics 365
+
+#### Meta
+- [TechCrunch: Zuckerberg Teases Agentic Commerce](https://techcrunch.com/2026/01/28/zuckerberg-teases-agentic-commerce-tools-and-major-ai-rollout-in-2026/) - Meta Q4 earnings reveals 2026 AI roadmap
+
+#### Amazon
+- [CNBC: Amazon Buy for Me](https://www.cnbc.com/2026/01/06/amazons-ai-shopping-tool-sparks-backlash-from-some-online-retailers.html) - Coverage of Amazon's AI shopping agent
+- [Modern Retail: Buy for Me Analysis](https://www.modernretail.co/technology/brands-are-upset-that-buy-for-me-is-featuring-their-products-on-amazon-without-permission/) - Deep dive on Amazon's agentic purchasing
+
+#### Regulatory
+- [UK ICO: Agentic Commerce Report](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/01/ai-ll-get-that/) - Tech Futures report on AI shopping agents and data protection
 
 <br>
 
@@ -360,12 +388,16 @@ Merchants wanting maximum reach may implement both.
 - [x] American Express
 - [x] Best Buy
 - [x] Flipkart
+- [x] Kroger
+- [x] Lowe's
 - [x] Macy's
 - [x] Mastercard
+- [x] Papa Johns
 - [x] Sephora
 - [x] Stripe
 - [x] The Home Depot
 - [x] Visa
+- [x] Woolworths
 - [x] Zalando
 
 ### ACP Partners
@@ -394,6 +426,11 @@ Merchants wanting maximum reach may implement both.
 - [x] Atlassian
 - [x] MongoDB
 - [x] ServiceNow
+
+### Other Agentic Commerce Platforms
+- [x] Amazon (Shop Direct / Buy for Me)
+- [x] Meta (Announced agentic commerce tools for 2026)
+- [x] Microsoft (Copilot Checkout, Brand Agents)
 
 ---
 
