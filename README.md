@@ -270,6 +270,7 @@ Merchants wanting maximum reach may implement both.
 ### ✅ UCP Validation & Testing
 
 - [UCP Playground](https://ucp.dev/playground/) - Official testing environment
+- [UCPtools](https://ucptools.dev) - Free UCP validator and ACP readiness checker — validates UCP manifests and checks ACP (ChatGPT Instant Checkout) eligibility in one tool
 - [UCP Checker](https://ucpchecker.com/) - Schema compliance validation
 - [UCP Lighthouse](https://ucp.rest/) - Payload validation
 - [Merchant Directory](https://merchants.awesomeucp.com/) - UCP-enabled merchants
