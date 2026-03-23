@@ -1,6 +1,6 @@
 # Awesome Agentic Commerce [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of resources for agentic commerce protocols: UCP, ACP, AP2, and A2A
+> A curated list of resources for agentic commerce protocols: UCP, ACP, AP2, MPP, and A2A
 
 This repository is a **reference point** to official resources. It does not own or maintain these protocols. For authoritative information, always consult the official documentation.
 
@@ -10,8 +10,10 @@ This repository is a **reference point** to official resources. It does not own 
 - [UCP - Universal Commerce Protocol](#ucp---universal-commerce-protocol)
 - [ACP - Agentic Commerce Protocol](#acp---agentic-commerce-protocol)
 - [AP2 - Agent Payments Protocol](#ap2---agent-payments-protocol)
+- [MPP - Machine Payments Protocol](#mpp---machine-payments-protocol)
 - [A2A - Agent2Agent Protocol](#a2a---agent2agent-protocol)
 - [How They Relate](#how-they-relate)
+- [Tools & Plugins](#tools--plugins)
 - [Developer Tools](#developer-tools)
 - [Related Technologies](#related-technologies)
 - [Learning Resources](#learning-resources)
@@ -30,7 +32,7 @@ Agentic commerce is the emerging paradigm where AI agents act on behalf of users
 - How can agents from different platforms communicate?
 - How do you prove the user actually wanted this purchase?
 
-**The Solution:** These four protocols work together to create a secure, interoperable foundation for agent-led commerce.
+**The Solution:** These five protocols work together to create a secure, interoperable foundation for agent-led commerce.
 
 <br>
 
@@ -58,6 +60,10 @@ UCP is "the common language for platforms, agents, and businesses." It defines b
 - [UCP Specification](https://ucp.dev/specification/overview/) - Technical spec
 - [UCP Playground](https://ucp.dev/playground/) - Interactive testing
 - [UCP Roadmap](https://ucp.dev/documentation/roadmap/) - Development roadmap
+
+### 🔌 Tools & Plugins
+
+- [UCP Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/ucp-agentic-commerce) - Claude Code plugin for UCP development
 
 ### 🏪 Google Merchant Integration
 
@@ -109,6 +115,10 @@ ACP enables AI agents to complete purchases on behalf of users directly within c
 - [Stripe ACP Docs](https://docs.stripe.com/agentic-commerce) - Stripe integration
 - [ACP Protocol Integration](https://docs.stripe.com/agentic-commerce/protocol) - Protocol details
 
+### 🔌 Tools & Plugins
+
+- [ACP Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/acp-agentic-commerce) - Claude Code plugin for ACP development
+
 ### 📋 Specifications
 
 - [Agentic Checkout Spec](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/spec/openapi/openapi.agentic_checkout.yaml) - Checkout OpenAPI spec
@@ -128,6 +138,8 @@ ACP enables AI agents to complete purchases on behalf of users directly within c
 - [Stripe Instant Checkout](https://stripe.com/newsroom/news/stripe-openai-instant-checkout) - Stripe announcement
 - [Developing an Open Standard](https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce) - Stripe Blog
 - [Stripe Commerce Solutions](https://stripe.com/blog/introducing-our-agentic-commerce-solutions) - Stripe solutions
+- [OpenAI Shifts Checkout Plans](https://www.digitalcommerce360.com/2026/03/06/openai-shifts-checkout-plans-agentic-commerce-strategy/) - OpenAI agentic commerce strategy pivot
+- [CNBC: OpenAI's Agentic Shopping Stumbled](https://www.cnbc.com/2026/03/20/open-ai-agentic-shopping-etsy-shopify-walmart-amazon.html) - Challenges with early agentic shopping
 
 <br>
 
@@ -156,6 +168,10 @@ AP2 introduces **Mandates**: tamper-proof, cryptographically-signed digital cont
 - [AP2 GitHub](https://github.com/google-agentic-commerce/AP2) - Samples and demos
 - [AP2 Specification](https://ap2-protocol.org/specification/) - Technical spec
 
+### 🔌 Tools & Plugins
+
+- [AP2 Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/ap2-agentic-payments) - Claude Code plugin for AP2 development
+
 ### 📚 Key Topics
 
 - [What is AP2](https://ap2-protocol.org/topics/what-is-ap2/) - Overview
@@ -177,6 +193,40 @@ AP2 introduces **Mandates**: tamper-proof, cryptographically-signed digital cont
 ### 📰 Announcements
 
 - [Announcing AP2](https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol) - Google Cloud Blog
+
+<br>
+
+## MPP - Machine Payments Protocol
+
+> Open standard for autonomous agent micropayments
+
+**Co-Authors:** Stripe, Tempo
+
+### What is MPP?
+
+MPP is an open standard for autonomous agent micropayments. It introduces a **sessions primitive** that allows AI agents to initiate, manage, and settle small-value transactions without human intervention at each step.
+
+**Key Concepts:**
+- **Sessions** - A primitive that bundles multiple micropayments into a single authorized context, reducing friction for high-frequency agent transactions
+- **Micropayments** - Designed for small-value, high-volume payments typical of agent-to-agent and agent-to-service interactions
+- **Multi-Rail Support** - Supports card networks, digital wallets, and Lightning Network for flexible settlement
+
+**Why it matters:** As AI agents consume paid APIs, purchase digital goods, and transact with other agents autonomously, traditional checkout flows break down. MPP provides a purpose-built payment layer for machine-to-machine commerce at scale.
+
+### 🎖️ Official Resources
+
+- [Stripe Blog: Introducing MPP](https://stripe.com/blog/machine-payments-protocol) - Launch announcement
+- [MPP Stripe Docs](https://docs.stripe.com/payments/machine/mpp) - Integration documentation
+- [Visa Card Spec & SDK for MPP](https://corporate.visa.com/en/sites/visa-perspectives/innovation/visa-card-specification-sdk-for-machine-payments-protocol.html) - Visa card specification and SDK
+
+### 🔌 Tools & Plugins
+
+- [MPP Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/stripe-mpp) - Claude Code plugin for MPP development
+
+### 📰 Announcements
+
+- [Fortune: Tempo Blockchain + MPP Launch](https://fortune.com/2026/03/18/stripe-tempo-paradigm-mpp-ai-payments-protocol/) - Stripe and Tempo partnership
+- [PYMNTS: Visa Scales via MPP](https://www.pymnts.com/visa/2026/visa-scales-agentic-commerce-through-stripe-protocol-collaboration/) - Visa scaling through MPP collaboration
 
 <br>
 
@@ -205,6 +255,10 @@ Think of it as the "common language" that lets a travel planning agent talk to a
 - [A2A Documentation](https://a2a-protocol.org/latest/) - Protocol overview
 - [A2A GitHub](https://github.com/a2aproject/A2A) - Specification and SDKs
 - [A2A Specification](https://a2a-protocol.org/latest/specification/) - Technical spec
+
+### 🔌 Tools & Plugins
+
+- [A2A Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/a2a-multi-agent) - Claude Code plugin for A2A development
 
 ### 🐍 Official SDKs
 
@@ -236,6 +290,7 @@ Think of it as the "common language" that lets a travel planning agent talk to a
 User → AI Agent → A2A (agent discovery & coordination)
                 → UCP/ACP (commerce actions)
                 → AP2 (payment authorization)
+                → MPP (agent micropayments)
                 → Merchants & Payment Networks
 ```
 
@@ -245,6 +300,7 @@ User → AI Agent → A2A (agent discovery & coordination)
 | **UCP** | Commerce | End-to-end commerce (Google ecosystem) |
 | **ACP** | Commerce | Agent checkout (OpenAI/Stripe ecosystem) |
 | **AP2** | Payments | Secure payment authorization with mandates |
+| **MPP** | Payments | Autonomous agent micropayments via sessions |
 
 ### Example: Planning a Trip
 
@@ -262,6 +318,12 @@ Both enable commerce, but target different ecosystems:
 - **ACP** - OpenAI/ChatGPT ecosystem, uses Shared Payment Tokens via Stripe
 
 Merchants wanting maximum reach may implement both.
+
+<br>
+
+## Tools & Plugins
+
+- [Agentic Commerce Claude Plugins](https://github.com/OrcaQubits/agentic-commerce-claude-plugins) - Claude Code plugins for agentic commerce protocol development (UCP, ACP, AP2, A2A)
 
 <br>
 
@@ -364,6 +426,11 @@ Merchants wanting maximum reach may implement both.
 - [A2A Protocol Community](https://a2aprotocol.ai/) - A2A guides and tutorials
 - [Agent2Agent Info](https://agent2agent.info/) - A2A code examples
 - [Agentic Commerce Pro](https://agenticcommerce.pro/) - ACP community examples
+- [ACP Ready Directory](https://www.acpready.com/) - ACP-ready platforms and providers directory
+
+### 📬 Newsletters
+
+- [Agentic Commerce Frontier](https://agentcommerce.substack.com/) - Weekly agentic commerce newsletter
 
 ### 💬 Discussions
 
@@ -409,6 +476,7 @@ Merchants wanting maximum reach may implement both.
 - [x] Salesforce
 - [x] Vercel
 - [x] Replit
+- [x] Fiserv (Mastercard Agent Pay integration)
 
 ### AP2 Payment Partners
 - [x] Mastercard
@@ -427,10 +495,23 @@ Merchants wanting maximum reach may implement both.
 - [x] MongoDB
 - [x] ServiceNow
 
+### Visa Agentic Ready (Europe)
+- [x] Barclays
+- [x] HSBC UK
+- [x] Banco Santander
+- [x] Revolut
+- [x] Commerzbank
+- [x] Nationwide Building Society
+- [x] Nexi Group
+- [x] Raiffeisen Bank International
+- [x] DZ Bank
+- [x] + 12 additional issuers (21 total enrolled)
+
 ### Other Agentic Commerce Platforms
 - [x] Amazon (Shop Direct / Buy for Me)
 - [x] Meta (Announced agentic commerce tools for 2026)
 - [x] Microsoft (Copilot Checkout, Brand Agents)
+- [x] Tempo (MPP co-author, blockchain-based agent payments)
 
 ---
 
