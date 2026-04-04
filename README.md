@@ -13,6 +13,8 @@ This repository is a **reference point** to official resources. It does not own 
 - [MPP - Machine Payments Protocol](#mpp---machine-payments-protocol)
 - [A2A - Agent2Agent Protocol](#a2a---agent2agent-protocol)
 - [How They Relate](#how-they-relate)
+- [Crypto Payment Rails](#crypto-payment-rails)
+- [Fiat Payment Rails](#fiat-payment-rails)
 - [Tools & Plugins](#tools--plugins)
 - [Developer Tools](#developer-tools)
 - [Related Technologies](#related-technologies)
@@ -291,6 +293,7 @@ User → AI Agent → A2A (agent discovery & coordination)
                 → UCP/ACP (commerce actions)
                 → AP2 (payment authorization)
                 → MPP (agent micropayments)
+                → Payment Rails (Stripe, Visa TAP, Mastercard, PayPal, x402, L402)
                 → Merchants & Payment Networks
 ```
 
@@ -301,6 +304,8 @@ User → AI Agent → A2A (agent discovery & coordination)
 | **ACP** | Commerce | Agent checkout (OpenAI/Stripe ecosystem) |
 | **AP2** | Payments | Secure payment authorization with mandates |
 | **MPP** | Payments | Autonomous agent micropayments via sessions |
+| **x402/L402** | Crypto Rails | Stablecoin and Lightning Network payments for agents |
+| **Visa TAP / Mastercard Agent Pay / PayPal Agent Ready** | Fiat Rails | Card network and wallet infrastructure for agent transactions |
 
 ### Example: Planning a Trip
 
@@ -318,6 +323,93 @@ Both enable commerce, but target different ecosystems:
 - **ACP** - OpenAI/ChatGPT ecosystem, uses Shared Payment Tokens via Stripe
 
 Merchants wanting maximum reach may implement both.
+
+<br>
+
+## Crypto Payment Rails
+
+### x402
+
+> HTTP 402 stablecoin payments over HTTP — no API keys, accounts, or subscriptions
+
+**Foundation:** Coinbase (co-founded with Cloudflare)
+
+x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin payments. It requires no API keys, accounts, or subscriptions—just a wallet. x402 serves as the crypto payment rail within the [AP2 protocol](https://ap2-protocol.org/topics/ap2-and-x402/).
+
+- [x402 Documentation](https://www.x402.org/) - Protocol overview and ecosystem
+- [x402 GitHub](https://github.com/coinbase/x402) - Specification, SDKs, and examples
+- [x402 Specification](https://github.com/coinbase/x402/tree/main/specs) - Technical spec
+- [Coinbase Developer Docs](https://docs.cdp.coinbase.com/x402/welcome) - Quickstart guide
+- [Solana Integration Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) - Solana x402 integration
+
+### L402
+
+> Macaroons + Lightning Network micropayments for stateless API authentication
+
+**Creator:** Lightning Labs
+
+L402 combines Macaroons (bearer authorization tokens) with Lightning Network micropayments for a stateless, pay-per-request API authentication model. It's the Bitcoin-native alternative to x402.
+
+- [L402 Builder's Guide](https://docs.lightning.engineering/the-lightning-network/l402) - Comprehensive documentation
+- [L402 Protocol Specification](https://docs.lightning.engineering/the-lightning-network/l402/protocol-specification) - Technical spec
+- [L402 GitHub](https://github.com/lightninglabs/L402) - Protocol specification source
+- [Aperture](https://github.com/lightninglabs/aperture) - Production L402 reverse proxy for REST and gRPC APIs
+
+### Fewsats
+
+> Practical L402 toolkit for AI agents — MCP server, CLI, Python SDK
+
+[Fewsats](https://github.com/fewsats) provides the tooling layer that makes L402 accessible to AI agents, including an MCP server for direct agent integration.
+
+- [Fewsats MCP Server](https://github.com/fewsats/fewsats-mcp) - MCP server for AI agent L402 payments
+- [L402 Python SDK](https://github.com/Fewsats/L402-python) - Python SDK for L402 agent payments
+
+<br>
+
+## Fiat Payment Rails
+
+### Visa — Intelligent Commerce
+
+> Trusted Agent Protocol (TAP) — authentication framework for agent-to-network communication
+
+**Initiative:** Visa "Intelligent Commerce" program
+**Authentication:** HTTP Message Signatures (RFC 9421)
+**Status:** 30+ partners in sandbox, early 2026
+
+Visa's TAP provides the authentication layer for AI agents to interact with card networks directly, using cryptographic HTTP message signatures.
+
+- [Intelligent Commerce Developer Program](https://developer.visa.com/capabilities/visa-intelligent-commerce) - Visa agent commerce program
+- [Trusted Agent Protocol (TAP)](https://developer.visa.com/capabilities/trusted-agent-protocol) - TAP documentation
+- [TAP GitHub](https://github.com/visa/trusted-agent-protocol) - Reference implementation and spec
+
+### Mastercard — Agent Pay
+
+> Agentic Tokens — scoped, time-limited payment credentials for AI agents
+
+Mastercard Agent Pay issues Agentic Tokens: scoped, time-limited credentials that allow agents to initiate payments within defined boundaries. Includes an official MCP server for API access.
+
+- [Agent Pay Developer Docs](https://developer.mastercard.com/mastercard-checkout-solutions/documentation/use-cases/agent-pay/) - Integration documentation
+
+### PayPal — Agent Ready
+
+> ACP-based agent payments for existing PayPal and Braintree merchants
+
+PayPal's Agent Ready enables existing merchants to accept agent-initiated payments with minimal integration overhead. PayPal manages security and PCI compliance. Includes Store Sync for catalog integration and an Agent Toolkit for programmatic access.
+
+- [Agentic Commerce Overview](https://docs.paypal.ai/growth/agentic-commerce/overview) - PayPal agentic commerce docs
+- [Agent Ready Documentation](https://docs.paypal.ai/growth/agentic-commerce/agent-ready) - Agent Ready integration guide
+- [Store Sync](https://docs.paypal.ai/growth/agentic-commerce/store-sync/create-a-product-catalog) - Product catalog and cart integration
+- [Agent Toolkit](https://github.com/paypal/agent-toolkit) - PayPal agent API integration via function calling
+
+### Cloudflare — Agents SDK
+
+> Infrastructure SDK with native x402 support and upcoming Visa/Mastercard agent protocol integration
+
+Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructure layer, currently supporting x402 with Visa and Mastercard agent protocols on the roadmap.
+
+- [Agents SDK Documentation](https://developers.cloudflare.com/agents/) - Full SDK docs
+- [x402 Integration](https://developers.cloudflare.com/agents/x402/) - x402 in the Agents SDK
+- [Secure Agentic Commerce](https://blog.cloudflare.com/secure-agentic-commerce/) - Visa and Mastercard protocol support announcement
 
 <br>
 
