@@ -442,6 +442,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) - Agent-to-tool communication standard
 - [MCP GitHub](https://github.com/modelcontextprotocol) - MCP repositories
 - [OAuth 2.0](https://oauth.net/2/) - Authorization framework used by UCP
+- [Human Pages](https://humanpages.ai) - The open directory AI agents use to hire humans for real-world tasks. x402 pay-per-use pricing in USDC on Base.
 
 <br>
 
