@@ -455,6 +455,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 
 ### 📖 Third-Party Analysis
 
+- [UCP Standards & Protocols Map (universalcommerceprotocol.blog)](https://universalcommerceprotocol.blog/en/standards-schemas-protocols/) - Comprehensive mapping of schema.org Product, GS1, MCP (Shopify official server), A2A, AP2, Stripe ACP, Visa IC and Mastercard Agent Pay — their role and interplay in the agentic commerce infrastructure stack.
 - [Everest Group: AP2 Analysis](https://www.everestgrp.com/googles-agent-payments-protocol-ap2-a-new-chapter-in-agentic-commerce-blog/) - Industry analysis
 - [CSA: AP2 Security Framework](https://cloudsecurityalliance.org/blog/2025/10/06/secure-use-of-the-agent-payments-protocol-ap2-a-framework-for-trustworthy-ai-driven-transactions) - Security framework
 - [IBM: What Is A2A](https://www.ibm.com/think/topics/agent2agent-protocol) - A2A explainer
@@ -515,6 +516,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 
 ### 🌐 Community Sites
 
+- [Universal Commerce Protocol Blog](https://universalcommerceprotocol.blog/en/) - Bilingual (FR/EN) editorial hub on UCP, agentic commerce infrastructure, Shopify MCP, schema.org standards, and merchant readiness guides. Includes structured llms.txt for AI indexing.
 - [A2A Protocol Community](https://a2aprotocol.ai/) - A2A guides and tutorials
 - [Agent2Agent Info](https://agent2agent.info/) - A2A code examples
 - [Agentic Commerce Pro](https://agenticcommerce.pro/) - ACP community examples
