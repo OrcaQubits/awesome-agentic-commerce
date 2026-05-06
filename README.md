@@ -427,6 +427,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [UCP Checker](https://ucpchecker.com/) - Schema compliance validation
 - [UCP Lighthouse](https://ucp.rest/) - Payload validation
 - [Merchant Directory](https://merchants.awesomeucp.com/) - UCP-enabled merchants
+- [Agentprobe](https://agentprobe.fly.dev) - Agentic commerce readiness scorer: 13-probe test suite checks llms.txt, OpenAPI, commerce.json, catalog/quote/checkout APIs, payment rail declarations, fulfillment proof, and no-fake-claims verification. Free public API + MCP endpoint.
 
 ### 🤖 Agent Development
 
