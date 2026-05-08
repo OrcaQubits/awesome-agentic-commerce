@@ -21,7 +21,7 @@ This repository is a **reference point** to official resources. It does not own 
 - [Related Technologies](#related-technologies)
 - [Learning Resources](#learning-resources)
   - [Platform Announcements](#-platform-announcements)
-- [Funding & Market Sizing](#funding--market-sizing)
+- [Market Sizing](#market-sizing)
 - [Community Resources](#community-resources)
 - [Adopters & Partners](#adopters--partners)
 
@@ -553,13 +553,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 
 <br>
 
-## Funding & Market Sizing
-
-### 💰 Funding Rounds
-
-- [Bluefish $43M Series B](https://www.prnewswire.com/news-releases/bluefish-raises-43-million-series-b-to-power-agentic-marketing-for-the-fortune-500-302741124.html) - April 14, 2026 — Threshold Ventures + NEA co-led, with Amex Ventures, TIAA, Salesforce Ventures; agentic marketing platform for Fortune 500
-
-### 📊 Market Forecasts
+## Market Sizing
 
 - [ICSC + McKinsey: $1T US Agentic Sales by 2030](https://www.paymentsdive.com/news/agentic-commerce-us-one-trillion-2030/819490/) - Most-cited TAM forecast for US B2C agentic commerce
 
