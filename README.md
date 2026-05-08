@@ -1,6 +1,6 @@
 # Awesome Agentic Commerce [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of resources for agentic commerce protocols: UCP, ACP, AP2, MPP, and A2A
+> A curated list of resources for agentic commerce protocols: UCP, ACP, AP2, MPP, AMP, and A2A
 
 This repository is a **reference point** to official resources. It does not own or maintain these protocols. For authoritative information, always consult the official documentation.
 
@@ -11,6 +11,7 @@ This repository is a **reference point** to official resources. It does not own 
 - [ACP - Agentic Commerce Protocol](#acp---agentic-commerce-protocol)
 - [AP2 - Agent Payments Protocol](#ap2---agent-payments-protocol)
 - [MPP - Machine Payments Protocol](#mpp---machine-payments-protocol)
+- [AMP - Agentic Mobile Protocol](#amp---agentic-mobile-protocol)
 - [A2A - Agent2Agent Protocol](#a2a---agent2agent-protocol)
 - [How They Relate](#how-they-relate)
 - [Crypto Payment Rails](#crypto-payment-rails)
@@ -19,7 +20,8 @@ This repository is a **reference point** to official resources. It does not own 
 - [Developer Tools](#developer-tools)
 - [Related Technologies](#related-technologies)
 - [Learning Resources](#learning-resources)
-  - [Major Platform Announcements (January 2026)](#-major-platform-announcements-january-2026)
+  - [Platform Announcements](#-platform-announcements)
+- [Funding & Market Sizing](#funding--market-sizing)
 - [Community Resources](#community-resources)
 - [Adopters & Partners](#adopters--partners)
 
@@ -140,8 +142,7 @@ ACP enables AI agents to complete purchases on behalf of users directly within c
 - [Stripe Instant Checkout](https://stripe.com/newsroom/news/stripe-openai-instant-checkout) - Stripe announcement
 - [Developing an Open Standard](https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce) - Stripe Blog
 - [Stripe Commerce Solutions](https://stripe.com/blog/introducing-our-agentic-commerce-solutions) - Stripe solutions
-- [OpenAI Shifts Checkout Plans](https://www.digitalcommerce360.com/2026/03/06/openai-shifts-checkout-plans-agentic-commerce-strategy/) - OpenAI agentic commerce strategy pivot
-- [CNBC: OpenAI's Agentic Shopping Stumbled](https://www.cnbc.com/2026/03/20/open-ai-agentic-shopping-etsy-shopify-walmart-amazon.html) - Challenges with early agentic shopping
+- [Powering Product Discovery in ChatGPT](https://openai.com/index/powering-product-discovery-in-chatgpt/) - OpenAI's pivot from Instant Checkout to merchant-controlled checkout, March 2026
 
 <br>
 
@@ -149,7 +150,8 @@ ACP enables AI agents to complete purchases on behalf of users directly within c
 
 > Secure payment authorization for agent-led transactions using cryptographic mandates
 
-**Maintainers:** Google + 60 partners
+**Maintainers:** FIDO Alliance (donated by Google, April 2026) + 60 partners
+**Latest version:** v0.2 (introduces "Human Not Present" autonomous payments)
 
 ### What is AP2?
 
@@ -195,6 +197,9 @@ AP2 introduces **Mandates**: tamper-proof, cryptographically-signed digital cont
 ### 📰 Announcements
 
 - [Announcing AP2](https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol) - Google Cloud Blog
+- [Google Donates AP2 to FIDO Alliance](https://blog.google/products-and-platforms/platforms/google-pay/agent-payments-protocol-fido-alliance/) - April 2026, also announces v0.2 with "Human Not Present" flow
+- [FIDO Alliance Forms Agentic Standards Working Groups](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/) - April 28, 2026 — New **Agentic Authentication TWG** (chaired by CVS Health, Google, OpenAI; vice-chaired by Amazon, Google, Okta) and existing **Payments TWG** (chaired by Mastercard, Visa) will develop interoperable standards from AP2 + Mastercard's Verifiable Intent
+- [PYMNTS: Google + Mastercard Contribute to FIDO](https://www.pymnts.com/artificial-intelligence-2/2026/google-and-mastercard-contribute-agentic-commerce-standards-to-fido-alliance/) - Industry coverage of the contributions
 
 <br>
 
@@ -229,6 +234,32 @@ MPP is an open standard for autonomous agent micropayments. It introduces a **se
 
 - [Fortune: Tempo Blockchain + MPP Launch](https://fortune.com/2026/03/18/stripe-tempo-paradigm-mpp-ai-payments-protocol/) - Stripe and Tempo partnership
 - [PYMNTS: Visa Scales via MPP](https://www.pymnts.com/visa/2026/visa-scales-agentic-commerce-through-stripe-protocol-collaboration/) - Visa scaling through MPP collaboration
+
+<br>
+
+## AMP - Agentic Mobile Protocol
+
+> Open-source mobile-first agentic payment framework for digital wallets, super apps, and wearables
+
+**Maintainers:** Ant International (Alipay+ ecosystem)
+**Launched:** April 2026
+
+### What is AMP?
+
+AMP is the first agentic payment protocol designed natively for mobile interfaces — smartphones, smartwatches, AR glasses, and in-car systems — rather than card-based desktop checkout. It establishes a universal, auditable standard for AI agents to transact across digital wallets and super apps.
+
+**Key Concepts:**
+- **KYA (Know Your Agent) Framework** - Establishes an agent's digital identity and certifies its authorized capabilities, parallel to KYC for humans
+- **Agent Trust Rating** - Dynamic risk-management score that determines an agent's trustworthiness and controls its level of autonomy
+- **Money-back Guarantee** - Every agent-initiated transaction is backed by a refund mechanism for payment partners in cases of account takeover
+- **Cross-device Compatibility** - Designed for non-card form factors absent from traditional payment rails
+
+**Why it matters:** The Alipay+ network reaches 1.8B user accounts and 150M merchants globally — primarily across APAC. AMP gives this footprint an agentic-commerce layer and complements card-based protocols (Visa TAP, Mastercard Agent Pay) for emerging markets where mobile wallets dominate.
+
+### 📰 Announcements
+
+- [Ant International Launches AMP](https://www.businesswire.com/news/home/20260427209524/en/Ant-International-Launches-Open-Sourced-Agentic-Mobile-Protocol-to-Drive-AI-Commerce) - BusinessWire, April 27, 2026
+- [PYMNTS: Agentic AI Gets Its Own Payment Protocol](https://www.pymnts.com/artificial-intelligence-2/2026/agentic-ai-gets-its-own-payment-protocol/) - Industry coverage, April 30, 2026
 
 <br>
 
@@ -283,6 +314,7 @@ Think of it as the "common language" that lets a travel planning agent talk to a
 
 - [Announcing A2A](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) - Google Developers Blog
 - [A2A v0.3 Upgrade](https://cloud.google.com/blog/products/ai-machine-learning/agent2agent-protocol-is-getting-an-upgrade) - Google Cloud Blog
+- [A2A One-Year Milestone: 150+ Organizations](https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year) - Linux Foundation, April 2026 — 22K+ GitHub stars, integrated into Azure AI Foundry and AWS Bedrock AgentCore
 
 <br>
 
@@ -304,6 +336,7 @@ User → AI Agent → A2A (agent discovery & coordination)
 | **ACP** | Commerce | Agent checkout (OpenAI/Stripe ecosystem) |
 | **AP2** | Payments | Secure payment authorization with mandates |
 | **MPP** | Payments | Autonomous agent micropayments via sessions |
+| **AMP** | Payments | Mobile-first agentic payments via digital wallets (Alipay+) |
 | **x402/L402** | Crypto Rails | Stablecoin and Lightning Network payments for agents |
 | **Visa TAP / Mastercard Agent Pay / PayPal Agent Ready** | Fiat Rails | Card network and wallet infrastructure for agent transactions |
 
@@ -341,6 +374,8 @@ x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin 
 - [x402 Specification](https://github.com/coinbase/x402/tree/main/specs) - Technical spec
 - [Coinbase Developer Docs](https://docs.cdp.coinbase.com/x402/welcome) - Quickstart guide
 - [Solana Integration Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) - Solana x402 integration
+- [Stellar x402 Facilitator](https://stellar.org/blog/foundation-news/x402-on-stellar) - Production facilitator on OpenZeppelin Relayer (sub-5s settlement)
+- [Pay.sh by Solana + Google Cloud](https://www.banklesstimes.com/articles/2026/05/06/solana-and-google-cloud-launch-pay-sh-for-ai-agent-micropayments/) - May 2026 stablecoin micropayment gateway for AI agents accessing Gemini, BigQuery, Vertex AI, and 50+ APIs
 
 ### L402
 
@@ -381,6 +416,8 @@ Visa's TAP provides the authentication layer for AI agents to interact with card
 - [Intelligent Commerce Developer Program](https://developer.visa.com/capabilities/visa-intelligent-commerce) - Visa agent commerce program
 - [Trusted Agent Protocol (TAP)](https://developer.visa.com/capabilities/trusted-agent-protocol) - TAP documentation
 - [TAP GitHub](https://github.com/visa/trusted-agent-protocol) - Reference implementation and spec
+- [Visa Launches Validator Node on Tempo](https://investor.visa.com/news/news-details/2026/Visa-Launches-Validator-Node-on-Tempo-Blockchain/default.aspx) - April 14, 2026 — Visa runs validator on Stripe's Tempo chain (TradFi/DeFi crossover)
+- [Visa Agentic Ready Expands to Canada](https://www.globenewswire.com/news-release/2026/05/05/3287953/0/en/Visa-Expands-Agentic-Ready-Program-to-Canada-to-Advance-AI-Driven-Commerce.html) - May 5, 2026 — BMO, CIBC, RBC, Scotiabank, TD as early adopters
 
 ### Mastercard — Agent Pay
 
@@ -389,6 +426,21 @@ Visa's TAP provides the authentication layer for AI agents to interact with card
 Mastercard Agent Pay issues Agentic Tokens: scoped, time-limited credentials that allow agents to initiate payments within defined boundaries. Includes an official MCP server for API access.
 
 - [Agent Pay Developer Docs](https://developer.mastercard.com/mastercard-checkout-solutions/documentation/use-cases/agent-pay/) - Integration documentation
+- [Mastercard Launches Agent Suite](https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Launches-Agent-Suite-to-Ready-Enterprises-for-a-New-Era/default.aspx) - January 27, 2026 — Enterprise toolkit bundling Agent Pay with deployment tools (GA Q2 2026)
+- [Mastercard Verifiable Intent (contributed to FIDO Alliance)](https://www.pymnts.com/artificial-intelligence-2/2026/google-and-mastercard-contribute-agentic-commerce-standards-to-fido-alliance/) - April 28, 2026 — Co-developed with Google, designed to work with AP2
+
+### American Express — Agentic Commerce Experiences (ACE)
+
+> Developer kit + Agent Purchase Protection — first card network with consumer-facing dispute coverage for agent errors
+
+**Launched:** April 14, 2026
+**Partners:** OpenAI, Google, Microsoft, PayPal, Stripe + 11 others
+
+Amex ACE is a developer kit with five components: agent registration, account enablement, intent intelligence (creating an "intent contract" + Proof of Intent Token), single-use payment credentials bound to intent and constraints, and cart context (banks/brands compare submitted cart vs. intent). Pairs with **Amex Agent Purchase Protection** — industry-first coverage for charges arising from AI agent errors when both card member and merchant acted correctly.
+
+- [American Express Debuts ACE Developer Kit](https://www.digitalcommerce360.com/2026/04/14/american-express-agentic-commerce-developer-kit-purchase-protection/) - DigitalCommerce360 coverage of launch
+- [PYMNTS: Amex to Back Purchases by Customer's AI Agents](https://www.pymnts.com/artificial-intelligence-2/2026/american-express-to-back-purchases-made-by-customers-ai-agents/) - Coverage of Agent Purchase Protection
+- [Amex Agentic Commerce Hub](https://www.americanexpress.com/en-us/company/agentic-commerce/) - Official Amex page (primary source)
 
 ### PayPal — Agent Ready
 
@@ -466,42 +518,50 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [AP2 Technical Guide (Medium)](https://medium.com/@visrow/google-agent-payments-protocol-ap2-technical-guide-implementation-73ee772fe349) - AP2 implementation
 - [AP2 Java Implementation](https://medium.com/@visrow/agent-payments-protocol-ap2-complete-guide-with-java-implementation-aec56400d360) - Java guide
 - [ACP Implementation Guide (Medium)](https://medium.com/@maheshlambe/step-by-step-guide-for-implementing-the-agentic-commerce-protocol-acp-aed4f9b1a457) - ACP step-by-step
-- [AP2 Guide (DEV)](https://dev.to/czmilo/2025-complete-guide-to-ai-agent-payments-how-the-ap2-protocol-is-reshaping-intelligent-commerce-2imf) - DEV Community guide
-- [A2A Guide (DEV)](https://dev.to/czmilo/2025-complete-guide-agent2agent-a2a-protocol-the-new-standard-for-ai-agent-collaboration-1pph) - DEV Community guide
 
 ### 📰 News Coverage
 
 - [TechCrunch: UCP Launch](https://techcrunch.com/2026/01/11/google-announces-a-new-protocol-to-facilitate-commerce-using-ai-agents/) - UCP announcement
-- [Search Engine Land: UCP](https://searchengineland.com/google-universal-commerce-protocol-467290) - UCP coverage
 - [InfoQ: A2A Open Source](https://www.infoq.com/news/2025/04/google-agentic-a2a/) - A2A coverage
 - [FinTech Magazine: AP2](https://fintechmagazine.com/news/agentic-pay-systems-googles-agent-payments-protocol) - AP2 coverage
-- [MarkTechPost: UCP](https://www.marktechpost.com/2026/01/12/google-ai-releases-universal-commerce-protocol-ucp-an-open-source-standard-designed-to-power-the-next-generation-of-agentic-commerce/) - Technical coverage
 - [SEJ: ACP & UCP for SEO](https://www.searchenginejournal.com/agentic-commerce-what-seos-need-to-consider-acp-ucp/563503/) - SEO considerations
-- [Marketing Brew: CES & NRF Announcements](https://www.marketingbrew.com/stories/2026/01/16/agentic-ai-announcements-ces-nrf) - Major agentic AI announcements roundup
-- [Modern Retail: AI Shopping Agent Wars](https://www.modernretail.co/technology/why-the-ai-shopping-agent-wars-will-heat-up-in-2026/) - 2026 industry outlook
-- [Commercetools: AI Trends Shaping Agentic Commerce](https://commercetools.com/blog/ai-trends-shaping-agentic-commerce) - 7 AI trends for 2026
-- [Ecommerce Times: Unified Platforms & Agentic AI](https://www.ecommercetimes.com/story/unified-platforms-and-agentic-ai-will-define-e-commerce-in-2026-178463.html) - 2026 e-commerce outlook
 
-### 🏢 Major Platform Announcements (January 2026)
+### 🏢 Platform Announcements
 
 #### Google
-- [A New Era of Agentic Commerce](https://cloud.google.com/transform/a-new-era-agentic-commerce-retail-ai) - Google Cloud Blog on retail AI
-- [Gemini Enterprise for CX](https://www.googlecloudpresscorner.com/2026-01-11-Google-Cloud-Brings-Shopping-and-Customer-Service-Together-with-Gemini-Enterprise-for-Customer-Experience) - Official press release
+- [Gemini Enterprise for CX](https://www.googlecloudpresscorner.com/2026-01-11-Google-Cloud-Brings-Shopping-and-Customer-Service-Together-with-Gemini-Enterprise-for-Customer-Experience) - Official press release (Jan 2026)
 - [NRF 2026 Remarks](https://blog.google/company-news/inside-google/message-ceo/nrf-2026-remarks/) - Google CEO message on AI platform shift
-- [CNBC: Google Bets on AI-Powered Retail](https://www.cnbc.com/2026/01/11/google-launches-universal-commerce-protocol-bets-on-ai-powered-retail.html) - UCP launch coverage
+
+#### OpenAI
+- [Powering Product Discovery in ChatGPT](https://openai.com/index/powering-product-discovery-in-chatgpt/) - Pivot from Instant Checkout to discovery (March 2026)
 
 #### Microsoft
-- [Microsoft Agentic AI for Retail](https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/) - Official announcement on Copilot Checkout, Brand Agents, and Dynamics 365
+- [Microsoft Agentic AI for Retail](https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/) - Copilot Checkout, Brand Agents, Dynamics 365
+
+#### Anthropic
+- [Claude Marketplace Launch](https://siliconangle.com/2026/03/06/anthropic-launches-claude-marketplace-third-party-cloud-services/) - Third-party services in Claude (Snowflake, GitLab, Harvey AI, Replit, Lovable Labs), March 2026
+- [Project Deal: Agent-to-Agent Commerce Experiment](https://www.anthropic.com/features/project-deal) - 69-employee marketplace pilot, 186 deals, $4K GMV — first published study on how model quality affects negotiation outcomes
 
 #### Meta
 - [TechCrunch: Zuckerberg Teases Agentic Commerce](https://techcrunch.com/2026/01/28/zuckerberg-teases-agentic-commerce-tools-and-major-ai-rollout-in-2026/) - Meta Q4 earnings reveals 2026 AI roadmap
 
 #### Amazon
-- [CNBC: Amazon Buy for Me](https://www.cnbc.com/2026/01/06/amazons-ai-shopping-tool-sparks-backlash-from-some-online-retailers.html) - Coverage of Amazon's AI shopping agent
 - [Modern Retail: Buy for Me Analysis](https://www.modernretail.co/technology/brands-are-upset-that-buy-for-me-is-featuring-their-products-on-amazon-without-permission/) - Deep dive on Amazon's agentic purchasing
 
 #### Regulatory
 - [UK ICO: Agentic Commerce Report](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/01/ai-ll-get-that/) - Tech Futures report on AI shopping agents and data protection
+
+<br>
+
+## Funding & Market Sizing
+
+### 💰 Funding Rounds
+
+- [Bluefish $43M Series B](https://www.prnewswire.com/news-releases/bluefish-raises-43-million-series-b-to-power-agentic-marketing-for-the-fortune-500-302741124.html) - April 14, 2026 — Threshold Ventures + NEA co-led, with Amex Ventures, TIAA, Salesforce Ventures; agentic marketing platform for Fortune 500
+
+### 📊 Market Forecasts
+
+- [ICSC + McKinsey: $1T US Agentic Sales by 2030](https://www.paymentsdive.com/news/agentic-commerce-us-one-trillion-2030/819490/) - Most-cited TAM forecast for US B2C agentic commerce
 
 <br>
 
@@ -587,23 +647,19 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [x] MongoDB
 - [x] ServiceNow
 
-### Visa Agentic Ready (Europe)
-- [x] Barclays
-- [x] HSBC UK
-- [x] Banco Santander
-- [x] Revolut
-- [x] Commerzbank
-- [x] Nationwide Building Society
-- [x] Nexi Group
-- [x] Raiffeisen Bank International
-- [x] DZ Bank
-- [x] + 12 additional issuers (21 total enrolled)
+### Visa Agentic Ready
+
+**Europe:** Barclays, HSBC UK, Banco Santander, Revolut, Commerzbank, Nationwide, Nexi, Raiffeisen, DZ Bank — 21+ issuers enrolled
+**Canada (May 2026):** BMO, CIBC, RBC, Scotiabank, TD
+**APAC + LatAm:** 85+ partners (incl. Alliance Bank Malaysia, CIMB, Maybank)
 
 ### Other Agentic Commerce Platforms
-- [x] Amazon (Shop Direct / Buy for Me)
+- [x] Amazon (Shop Direct / Buy for Me / Rufus)
 - [x] Meta (Announced agentic commerce tools for 2026)
 - [x] Microsoft (Copilot Checkout, Brand Agents)
 - [x] Tempo (MPP co-author, blockchain-based agent payments)
+- [x] Ant International (AMP, Alipay+ ecosystem — 1.8B users, 150M merchants)
+- [x] Anthropic (Claude Marketplace, Project Deal experiment)
 
 ---
 
