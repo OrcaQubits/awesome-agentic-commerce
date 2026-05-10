@@ -68,6 +68,7 @@ UCP is "the common language for platforms, agents, and businesses." It defines b
 ### 🔌 Tools & Plugins
 
 - [UCP Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/ucp-agentic-commerce) - Claude Code plugin for UCP development
+- [NotFair](https://notfair.co) - Google Ads MCP server. Connect Claude and AI agents to a Google Ads account: diagnose campaign performance, recommend optimizations, and execute approved changes via the Google Ads API. Source: github.com/nowork-studio/toprank. Free tier available.
 
 ### 🏪 Google Merchant Integration
 
