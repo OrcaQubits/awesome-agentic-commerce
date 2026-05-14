@@ -468,6 +468,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 ## Tools & Plugins
 
 - [Agentic Commerce Claude Plugins](https://github.com/OrcaQubits/agentic-commerce-claude-plugins) - Claude Code plugins for agentic commerce protocol development (UCP, ACP, AP2, A2A)
+- [Packrift MCP](https://github.com/Packrift/packrift-mcp) - Packaging procurement MCP server for AI commerce agents to query exact-size SKUs, carton-fit recommendations, shipping estimates, and dimensional-weight options.
 
 <br>
 
