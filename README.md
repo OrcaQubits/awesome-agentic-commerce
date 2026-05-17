@@ -377,6 +377,10 @@ x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin 
 - [Stellar x402 Facilitator](https://stellar.org/blog/foundation-news/x402-on-stellar) - Production facilitator on OpenZeppelin Relayer (sub-5s settlement)
 - [Pay.sh by Solana + Google Cloud](https://www.banklesstimes.com/articles/2026/05/06/solana-and-google-cloud-launch-pay-sh-for-ai-agent-micropayments/) - May 2026 stablecoin micropayment gateway for AI agents accessing Gemini, BigQuery, Vertex AI, and 50+ APIs
 
+### 🔌 MCP Servers & Tools
+
+- [OpenMM MCP](https://github.com/QBT-Labs/openMM-MCP) - MCP server exposing x402-gated market data, order execution, grid strategies, and portfolio management across 4 exchanges. Hosted endpoint (`mcp.openmm.io`) accepts x402 USDC payments; local install supports self-custody vault.
+
 ### L402
 
 > Macaroons + Lightning Network micropayments for stateless API authentication
@@ -468,6 +472,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 ## Tools & Plugins
 
 - [Agentic Commerce Claude Plugins](https://github.com/OrcaQubits/agentic-commerce-claude-plugins) - Claude Code plugins for agentic commerce protocol development (UCP, ACP, AP2, A2A)
+- [OpenMM MCP](https://github.com/QBT-Labs/openMM-MCP) - x402-native MCP server for AI agent trading: market data, order execution, grid strategies, portfolio management. Pay-per-use via x402 USDC on Base.
 
 <br>
 
