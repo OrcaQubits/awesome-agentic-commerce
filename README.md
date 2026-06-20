@@ -399,6 +399,17 @@ L402 combines Macaroons (bearer authorization tokens) with Lightning Network mic
 - [Fewsats MCP Server](https://github.com/fewsats/fewsats-mcp) - MCP server for AI agent L402 payments
 - [L402 Python SDK](https://github.com/Fewsats/L402-python) - Python SDK for L402 agent payments
 
+### PipRail
+
+> Backendless, self-custody x402 toolkit for AI agents — TypeScript SDK + MCP server, any chain, no facilitator
+
+[PipRail](https://piprail.com) is an open-source x402 implementation with no backend, database, or fee — payments settle straight to the developer's wallet, verified locally against their own RPC. One `chain:` parameter spans every major EVM chain plus Solana, TON, Tron, NEAR, Sui, Aptos, Algorand, Stellar, and the XRP Ledger.
+
+- [@piprail/sdk](https://www.npmjs.com/package/@piprail/sdk) - TypeScript SDK for x402 agent payments across any EVM chain, Solana, and many non-EVM families
+- [@piprail/mcp](https://www.npmjs.com/package/@piprail/mcp) - MCP server giving any agent a budget-bound wallet to pay x402 URLs autonomously
+- [PipRail GitHub](https://github.com/piprail/piprail) - Source, drivers, and runnable merchant/agent demos
+- [PipRail Docs](https://docs.piprail.com) - Chain coverage, the `exact` scheme, and gasless/keyless rails
+
 <br>
 
 ## Fiat Payment Rails
