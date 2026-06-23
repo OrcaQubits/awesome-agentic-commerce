@@ -399,6 +399,15 @@ L402 combines Macaroons (bearer authorization tokens) with Lightning Network mic
 - [Fewsats MCP Server](https://github.com/fewsats/fewsats-mcp) - MCP server for AI agent L402 payments
 - [L402 Python SDK](https://github.com/Fewsats/L402-python) - Python SDK for L402 agent payments
 
+### Zero
+
+> x402/MPP capability layer for AI - find, inspect, call, and pay for real services per use at runtime
+
+[Zero](https://zero.xyz) is an x402/MPP capability layer where an AI discovers and pays for real services per use at runtime (find, inspect, call, pay). No API keys, no signup. Ships a CLI, an MCP connector, and a Claude Code plugin.
+
+- [Zero MCP Connector](https://mcp.zero.xyz) - MCP connector for runtime service discovery and x402/MPP payments
+- [Zero CLI](https://www.npmjs.com/package/@zeroxyz/cli) - CLI for the Zero capability layer
+
 <br>
 
 ## Fiat Payment Rails
