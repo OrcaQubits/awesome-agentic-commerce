@@ -654,6 +654,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [x] Tempo (MPP co-author, blockchain-based agent payments)
 - [x] Ant International (AMP, Alipay+ ecosystem — 1.8B users, 150M merchants)
 - [x] Anthropic (Claude Marketplace, Project Deal experiment)
+- [x] [Suede Labs AI](https://suedeai.ai) (x402 + ACP-ready endpoints for licensing and paying for rights-backed AI media)
 
 ---
 
