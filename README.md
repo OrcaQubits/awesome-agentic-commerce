@@ -479,6 +479,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [UCP Checker](https://ucpchecker.com/) - Schema compliance validation
 - [UCP Lighthouse](https://ucp.rest/) - Payload validation
 - [Merchant Directory](https://merchants.awesomeucp.com/) - UCP-enabled merchants
+- [Packrift UCP Shipping-Supplies Starter Kit](https://mcp.packrift.com/ai/packrift-ucp-shipping-supplies-starter-kit.html) - Live Shopify UCP packaging merchant and no-auth MCP for boxes, mailers, bags, tape, labels, stretch wrap, and cart handoff
 
 ### 🤖 Agent Development
 
