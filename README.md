@@ -376,6 +376,7 @@ x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin 
 - [Solana Integration Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) - Solana x402 integration
 - [Stellar x402 Facilitator](https://stellar.org/blog/foundation-news/x402-on-stellar) - Production facilitator on OpenZeppelin Relayer (sub-5s settlement)
 - [Pay.sh by Solana + Google Cloud](https://www.banklesstimes.com/articles/2026/05/06/solana-and-google-cloud-launch-pay-sh-for-ai-agent-micropayments/) - May 2026 stablecoin micropayment gateway for AI agents accessing Gemini, BigQuery, Vertex AI, and 50+ APIs
+- [400860 Radar x402 API](https://api.400860.xyz/) - x402-native API catalog for agent spend policy, checkout readiness repair, market intel, and paid MCP/API launch evidence; publishes OpenAPI, llms.txt, apis.json, agent-card, and `.well-known/x402` discovery assets.
 
 ### L402
 
