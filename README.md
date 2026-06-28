@@ -486,6 +486,7 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [ADK Python](https://github.com/google/adk-python) - ADK Python SDK
 - [ADK Samples](https://github.com/google/adk-samples) - ADK sample code
 - [Awesome ADK Agents](https://github.com/Sri-Krishna-V/awesome-adk-agents) - Curated ADK examples
+- [BuyWhere MCP](https://github.com/BuyWhere/buywhere-mcp) 📇 ☁️ - Product search MCP server + A2A-compliant Agent Card for AI shopping agents. 164M+ products across 89K+ merchants in Singapore, US, and SEA. Free API and CLI.
 
 <br>
 
