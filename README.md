@@ -377,6 +377,8 @@ x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin 
 - [Stellar x402 Facilitator](https://stellar.org/blog/foundation-news/x402-on-stellar) - Production facilitator on OpenZeppelin Relayer (sub-5s settlement)
 - [Pay.sh by Solana + Google Cloud](https://www.banklesstimes.com/articles/2026/05/06/solana-and-google-cloud-launch-pay-sh-for-ai-agent-micropayments/) - May 2026 stablecoin micropayment gateway for AI agents accessing Gemini, BigQuery, Vertex AI, and 50+ APIs
 - [Intelica](https://api.intelica.dev) — Competitive intelligence API for autonomous AI agents. Analyzes any URL or company description, returns structured JSON with market positioning, competitors, pain points, and executable Market Score (`threat_level`, `moat_strength`, `agent_recommendation`). 10 context modes including `crypto_protocol`, `regulatory_compliance`, `venture_screening`, `risk_assessment`, `sales_enablement`. Standard $0.05 USDC / Elite $1.00 USDC on Base + Solana. MCP at `/mcp`, A2A at `/message/send`. ([x402 manifest](https://api.intelica.dev/.well-known/x402.json), [OpenAPI](https://api.intelica.dev/openapi.json))
+- [VeraData](https://api.veradata.dev) — Verified Latin American data for autonomous AI agents via x402 micropayments. Sanctions screening (OFAC SDN + SARLAFT Colombia + CNBV Mexico + COAF Brazil + UAF Chile, 20K+ entries, EU AI Act Art.13 audit hash), entity enrichment (RUES/CNPJ/RFC registries), real-time central bank rates (DTF/TIIE/Selic/TRM/UF for CO/MX/BR/CL/PE), business registry lookup, and AI-powered LATAM market context. $0.02–$0.10 USDC on Base + Solana. No API key — any agent with a wallet can call it. ([llms.txt](https://api.veradata.dev/llms.txt))
+- [TrustBoost](https://api.trustboost.dev) — PII sanitization layer for autonomous AI agent pipelines. Detects and redacts emails, phone numbers, national IDs, private keys, and financial data before text reaches LLMs. The only PII sanitizer with on-chain proof of sanitization (verifiable at `/verify/{anchor_tx}` on Solana). Pay-per-call $0.01 USDC on Base/Solana, or $149/10k bundle. ([agent-card](https://api.trustboost.dev/.well-known/agent-card.json), [llms.txt](https://api.trustboost.dev/llms.txt))
 
 ### L402
 
@@ -663,3 +665,13 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 This compilation is provided under the [MIT License](./LICENSE).
 
 The protocols themselves are Apache 2.0 licensed by their respective maintainers.
+
+## 🇱🇦 Agentic Commerce Stack for LATAM
+
+A composable trio of x402-payable APIs designed to be chained by autonomous agents — no human in the loop:
+
+- 🛡️ **[TrustBoost](https://api.trustboost.dev)** — PII sanitization with on-chain proof. Call BEFORE any scraped/user text reaches an LLM. `$0.01`/call (Base) or `$149`/10k bundle.
+- 🧠 **[Intelica](https://api.intelica.dev)** — Competitive & market intelligence. Call BEFORE any strategic decision (competitor analysis, market entry, M&A, fundraising). `$0.05`/call via x402.
+- ✅ **[VeraData](https://api.veradata.dev)** — Verified LATAM data & sanctions/compliance screening. Call to verify any counterparty before onboarding or transacting. `$0.02–$0.10`/call.
+
+**Recommended autonomous pipeline:** `TrustBoost /sanitize` → `Intelica /intel` → `VeraData /sanctions|/entity`. All three share the same account-free, subscription-free, wallet-only x402 model on Base + Solana.
