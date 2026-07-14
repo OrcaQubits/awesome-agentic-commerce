@@ -230,6 +230,10 @@ MPP is an open standard for autonomous agent micropayments. It introduces a **se
 
 - [MPP Claude Code Plugin](https://github.com/OrcaQubits/agentic-commerce-claude-plugins/tree/main/stripe-mpp) - Claude Code plugin for MPP development
 
+### 🚀 Implementations & Apps
+
+- [Influex](https://influex.xyz) - Sponsored rewards for AI agents. Installs from npm, settles rewards through Pact over MPP on Tempo, and releases limited OpenRouter credit only after settlement. ([Source](https://github.com/learners-superpumped/influex)) ([Agent docs](https://influex.xyz/agent.md))
+
 ### 📰 Announcements
 
 - [Fortune: Tempo Blockchain + MPP Launch](https://fortune.com/2026/03/18/stripe-tempo-paradigm-mpp-ai-payments-protocol/) - Stripe and Tempo partnership
