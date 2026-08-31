@@ -634,6 +634,9 @@ Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructu
 - [x] Revolut
 - [x] Worldpay
 
+### MPP Adopters
+- [x] [NitroTranslate (Alconost)](https://nitrotranslate.com) — first human translation service to accept per-request agent payments over HTTP 402 via MPP; no account or prefunded balance required (payment manifest: [commerce.json](https://nitrotranslate.com/.well-known/commerce.json))
+
 ### A2A Supporters
 - [x] Google (Linux Foundation governance)
 - [x] 150+ organizations
