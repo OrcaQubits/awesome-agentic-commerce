@@ -370,6 +370,7 @@ Merchants wanting maximum reach may implement both.
 x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin payments. It requires no API keys, accounts, or subscriptions—just a wallet. x402 serves as the crypto payment rail within the [AP2 protocol](https://ap2-protocol.org/topics/ap2-and-x402/).
 
 - [x402 Documentation](https://www.x402.org/) - Protocol overview and ecosystem
+- [Toll402](https://toll402.dev) - Pay-per-call tool gateway on x402: tools, a 4M-business verified directory and 2,000+ aggregated x402 services for AI agents, as an MCP server and A2A agent; paid listings for other x402/MCP/A2A services
 - [x402 GitHub](https://github.com/coinbase/x402) - Specification, SDKs, and examples
 - [x402 Specification](https://github.com/coinbase/x402/tree/main/specs) - Technical spec
 - [Coinbase Developer Docs](https://docs.cdp.coinbase.com/x402/welcome) - Quickstart guide
