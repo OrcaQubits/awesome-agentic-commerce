@@ -4,6 +4,8 @@
 
 This repository is a **reference point** to official resources. It does not own or maintain these protocols. For authoritative information, always consult the official documentation.
 
+Contributions are welcome — please read [CONTRIBUTING.md](./CONTRIBUTING.md) first. In short: this list indexes protocols, not products built on them, and corrections are the most valuable contribution you can make.
+
 ## Contents
 
 - [What is Agentic Commerce?](#what-is-agentic-commerce)
@@ -30,6 +32,7 @@ This repository is a **reference point** to official resources. It does not own 
 - [Regulatory Landscape](#regulatory-landscape)
 - [Community Resources](#community-resources)
 - [Adopters & Partners](#adopters--partners)
+- [Contributing](#contributing)
 
 <br>
 
@@ -1158,6 +1161,21 @@ Gold members include Adyen, Cisco, Datadog, Docker, IBM, Okta, Oracle, Salesforc
 - [x] Adyen (Adyen Agentic — multi-protocol integration layer)
 
 ---
+
+## Contributing
+
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
+
+**The scope test:** does an entry help someone *understand or implement a protocol*, or does it *offer them a service that uses one*? The first belongs here; the second does not, however good the service.
+
+- ✅ Specifications, official SDKs and docs, governance bodies, conformance tools, vendor-neutral analysis
+- ✅ **Corrections** — outdated versions, renamed concepts, dead links, claims that stopped being true. Reviewed fastest
+- ❌ Products, hosted services, and paid APIs built on these protocols
+- ❌ New sections created to house your own entry
+
+If you are affiliated with something you submit, say so in the pull request.
+
+<br>
 
 ## License
 
