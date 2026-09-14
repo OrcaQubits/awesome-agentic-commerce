@@ -701,6 +701,17 @@ L402 combines Macaroons (bearer authorization tokens) with Lightning Network mic
 - [Fewsats MCP Server](https://github.com/fewsats/fewsats-mcp) - MCP server for AI agent L402 payments
 - [L402 Python SDK](https://github.com/Fewsats/L402-python) - Python SDK for L402 agent payments
 
+### PipRail
+
+> Backendless, self-custody x402 toolkit — TypeScript SDK + MCP server, no facilitator
+
+An open-source x402 implementation with no backend, database, or protocol fee: payments settle directly to the developer's wallet and are verified locally against their own RPC. A single `chain:` parameter spans the major EVM chains plus Solana, TON, Tron, NEAR, Sui, Aptos, Algorand, Stellar, and the XRP Ledger. MIT licensed.
+
+- [PipRail GitHub](https://github.com/piprail/piprail) - Source, chain drivers, and runnable merchant/agent demos
+- [@piprail/sdk](https://www.npmjs.com/package/@piprail/sdk) - TypeScript SDK for x402 payments across EVM and non-EVM chains
+- [@piprail/mcp](https://www.npmjs.com/package/@piprail/mcp) - MCP server giving an agent a budget-bound wallet to pay x402 URLs
+- [PipRail Docs](https://docs.piprail.com) - Chain coverage, the `exact` scheme, and gasless/keyless rails
+
 <br>
 
 ## Fiat Payment Rails
@@ -878,6 +889,7 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 
 ### 📖 Third-Party Analysis
 
+- [UCP Standards & Protocols Map](https://universalcommerceprotocol.blog/en/standards-schemas-protocols/) - Mapping of schema.org Product, GS1, MCP, A2A, AP2, ACP, Visa Intelligent Commerce, and Mastercard Agent Pay, and how they interlock
 - [Everest Group: AP2 Analysis](https://www.everestgrp.com/googles-agent-payments-protocol-ap2-a-new-chapter-in-agentic-commerce-blog/) - Industry analysis
 - [CSA: AP2 Security Framework](https://cloudsecurityalliance.org/blog/2025/10/06/secure-use-of-the-agent-payments-protocol-ap2-a-framework-for-trustworthy-ai-driven-transactions) - Security framework
 - [IBM: What Is A2A](https://www.ibm.com/think/topics/agent2agent-protocol) - A2A explainer
@@ -1004,6 +1016,7 @@ The most consequential legal development in agentic commerce so far — it addre
 
 ### 🌐 Community Sites
 
+- [Universal Commerce Protocol Blog](https://universalcommerceprotocol.blog/en/) - Bilingual (FR/EN) editorial hub on UCP, Shopify MCP, schema.org, and merchant readiness
 - [A2A Protocol Community](https://a2aprotocol.ai/) - A2A guides and tutorials
 - [Agent2Agent Info](https://agent2agent.info/) - A2A code examples
 - [Agentic Commerce Pro](https://agenticcommerce.pro/) - ACP community examples
