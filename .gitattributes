@@ -1,0 +1,23 @@
+# Normalize all text files to LF in the repository.
+# Overrides core.autocrlf on Windows checkouts, so contributors on any
+# platform produce identical blobs and diffs stay clean.
+* text=auto eol=lf
+
+# Documentation and config — this repo is markdown-first.
+*.md        text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.json      text eol=lf
+*.toml      text eol=lf
+.gitignore  text eol=lf
+.gitattributes text eol=lf
+LICENSE     text eol=lf
+
+# Binary assets — never normalize or diff as text.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.pdf  binary
