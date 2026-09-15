@@ -1040,6 +1040,7 @@ The most consequential legal development in agentic commerce so far — it addre
 - [UCP GitHub Discussions](https://github.com/Universal-Commerce-Protocol/ucp/discussions)
 - [ACP GitHub Discussions](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/discussions)
 - [A2A GitHub Discussions](https://github.com/a2aproject/A2A/discussions)
+- [HostDeFi](https://hostdefi.com/api/v1/x402/pricing) - x402-payable token-safety API: A+–F grades, risk scores and datasets settle per call in USDC; free `scan_token` MCP tool also available.
 
 <br>
 
