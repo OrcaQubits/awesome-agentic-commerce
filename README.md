@@ -715,6 +715,21 @@ An open-source x402 implementation with no backend, database, or protocol fee: p
 - [@piprail/mcp](https://www.npmjs.com/package/@piprail/mcp) - MCP server giving an agent a budget-bound wallet to pay x402 URLs
 - [PipRail Docs](https://docs.piprail.com) - Chain coverage, the `exact` scheme, and gasless/keyless rails
 
+### Nano (XNO)
+
+> Layer-1, self-custodied settlement rail — feeless, sub-second finality, no facilitator, no per-leg gas
+
+**Governance:** decentralized, protocol-native; no issuer or facilitator that can freeze, reverse, or charge a protocol fee
+
+Nano is an asynchronous, block-lattice layer-1 protocol for machine-to-machine payments. Settlement is feeless (no protocol fee on either side) with ~0.3 s finality, and the payer holds the account key directly (self-custody, no bridge, no off-chain batching risk). It is a *settlement layer* — an agent-payment scheme (e.g. an `exact`-scheme x402 variant) can settle on it — rather than an HTTP-402 scheme of its own.
+
+⚠️ **Honest positioning.** `nano:mainnet` is not in x402's shipped network list today; Nano is an adjacent live rail, not an x402-standard claim. And like any non-stable crypto, XNO price varies — a seller who needs fiat routes through a gateway.
+
+- [Nano Protocol](https://nano.org) - Official protocol overview
+- [Nano Protocol Docs](https://nano.org/en/docs) - Tech, governance, and settlement behaviour
+- [nano-node GitHub](https://github.com/nanocurrency/nano-node) - Official node implementation and spec source
+- [Nano RPC API](https://docs.nano.org/commands/rpc-protocol/) - Programmatic send/receive for agent settlement
+
 <br>
 
 ## Fiat Payment Rails
