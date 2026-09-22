@@ -715,6 +715,19 @@ An open-source x402 implementation with no backend, database, or protocol fee: p
 - [@piprail/mcp](https://www.npmjs.com/package/@piprail/mcp) - MCP server giving an agent a budget-bound wallet to pay x402 URLs
 - [PipRail Docs](https://docs.piprail.com) - Chain coverage, the `exact` scheme, and gasless/keyless rails
 
+### Nano (XNO)
+
+> Feeless, self-custodied, protocol-native settlement rail — zero protocol fee, sub-second finality, no facilitator or issuer
+
+**Layer 1:** Nano (XNO) is a distributed-ledger network whose native asset settles in ~0 seconds at **zero protocol fee**, with no mining, no gas token, no issuer that can freeze funds, and no bridges for on-network value. It is the "no fee floor" counterpoint to the stablecoin-on-layer-2 and Lightning rails in this section, which each carry gas, routing, or custody overhead on every leg.
+
+As an agent payment rail it plugs into the same HTTP `402` flow: an exact-scheme x402 settlement leg settles on `nano:mainnet` through a facilitator, so an agent can pay per call in XNO with no wallet top-up beyond a Nano balance.
+
+- [Nano Protocol & Docs](https://nano.org) - Layer-1 protocol documentation and ecosystem
+- [x402nano/exact](https://github.com/x402nano/exact) - Reference exact-scheme x402 settlement implementation for Nano
+- [x402nano/facilitator](https://github.com/x402nano/facilitator) - Facilitator that settles 402-style payments in XNO on mainnet
+- [pursekeeper/x402-nano-exact](https://github.com/pursekeeper/x402-nano-exact) - Python exact-scheme client for Nano settlement
+
 <br>
 
 ## Fiat Payment Rails
