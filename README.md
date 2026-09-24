@@ -631,6 +631,7 @@ User → AI Agent → Web Bot Auth (cryptographic agent identity)
 | **AMP** | Payments | Mobile-first agentic payments via digital wallets (Alipay+) | Ant International |
 | **x402** | Crypto Rails | HTTP 402 stablecoin payments | x402 Foundation (Linux Foundation) |
 | **L402** | Crypto Rails | Lightning Network micropayments with Macaroons | Lightning Labs |
+| **Nano (XNO)** | Crypto Rails | Feeless layer-1 native settlement | Decentralised (no single issuer) |
 | **Visa TAP / Mastercard Verifiable Intent / PayPal Agent Ready** | Fiat Rails | Card network and wallet infrastructure for agent transactions | Respective networks; KYA interop in progress |
 
 ### Example: Planning a Trip
@@ -714,6 +715,16 @@ An open-source x402 implementation with no backend, database, or protocol fee: p
 - [@piprail/sdk](https://www.npmjs.com/package/@piprail/sdk) - TypeScript SDK for x402 payments across EVM and non-EVM chains
 - [@piprail/mcp](https://www.npmjs.com/package/@piprail/mcp) - MCP server giving an agent a budget-bound wallet to pay x402 URLs
 - [PipRail Docs](https://docs.piprail.com) - Chain coverage, the `exact` scheme, and gasless/keyless rails
+
+### Nano (XNO)
+
+> Feeless layer-1 settlement where the payer's signed send block is the receipt
+
+Nano is a layer-1 network for value transfer. A send is a signed block that settles directly on the ledger, so there is no facilitator settlement step, no per-payment protocol fee on either side, and no issuer that can freeze or reverse a payment. An agent can broadcast its own signed send block (via a node RPC or an HTTP-402 style wrapper) and settle a pay-per-use call without a customer-account or card step. The protocol itself is governed in the open; Nano has no central issuer.
+
+- [Nano](https://nano.org) - Protocol overview and ecosystem
+- [Nano Documentation](https://docs.nano.org) - Whitepaper, RPC, and integration guides
+- [Nano integration guides](https://docs.nano.org/integration-guides/) - Connecting apps to the Nano ledger
 
 <br>
 
