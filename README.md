@@ -1030,6 +1030,7 @@ The most consequential legal development in agentic commerce so far — it addre
 - [UCP Checker Blog](https://ucpchecker.com/blog/) - Monthly "State of Agentic Commerce" reports with independent crawler data on UCP adoption
 - [agenticplug Protocol Tracker](https://agenticplug.ai/current-state-of-agentic-commerce) - Cross-protocol status and version tracker
 - [Agentic Commerce Report](https://agenticcommerce.report/) - Weekly industry newsletter archive
+- [Agentic Payments Readiness Dataset](https://github.com/Pink-Agentic-Payments/agentic-payments-readiness) - Evidence-linked scoring of 13 payment providers across 7 agent-readiness dimensions (SDK/API, MCP server, x402/AP2/ACP support, sandbox, guardrails, rails, docs), CC BY 4.0
 
 ### 📬 Newsletters
 
