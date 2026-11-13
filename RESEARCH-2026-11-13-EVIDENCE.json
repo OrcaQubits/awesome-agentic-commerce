@@ -1,0 +1,635 @@
+{
+  "checked_on": "2026-11-13",
+  "repository_commit": "8a784189946942b5e48d086ed3284fdc4bcb6a8e",
+  "note": "Term checks locate evidence; they are not independent semantic validation. HTTP failures do not establish a dead link. Hashes identify returned bodies, not immutable upstream versions.",
+  "sources": [
+    {
+      "id": "ucp_release",
+      "url": "https://api.github.com/repos/Universal-Commerce-Protocol/ucp/releases/latest",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/Universal-Commerce-Protocol/ucp/releases/latest",
+      "sha256": "ad0591ff3742194d96798bb03277f099b06affcda878709168d9d6fc2378b2c7",
+      "observed": {
+        "tag_name": "v2026-08-25",
+        "published_at": "2026-08-25T13:53:03Z"
+      }
+    },
+    {
+      "id": "a2a_release",
+      "url": "https://api.github.com/repos/a2aproject/A2A/releases/latest",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/a2aproject/A2A/releases/latest",
+      "sha256": "283eaa140eb4e412ddca243846b4d2b8c5c74e945cc870ee086fdb5720c5f307",
+      "observed": {
+        "tag_name": "v1.0.1",
+        "published_at": "2026-05-28T11:34:36Z"
+      }
+    },
+    {
+      "id": "acp_versions",
+      "url": "https://api.github.com/repos/agentic-commerce-protocol/agentic-commerce-protocol/contents/spec",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/agentic-commerce-protocol/agentic-commerce-protocol/contents/spec",
+      "sha256": "b37c90fea4adb4d5d35182fede4b472abfa6610cc3407ece15826ccf02c4176e",
+      "observed": {
+        "names": [
+          "2025-09-29",
+          "2025-12-12",
+          "2026-01-16",
+          "2026-01-30",
+          "2026-04-17",
+          "unreleased"
+        ]
+      }
+    },
+    {
+      "id": "acp_head",
+      "url": "https://api.github.com/repos/agentic-commerce-protocol/agentic-commerce-protocol/commits/main",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/agentic-commerce-protocol/agentic-commerce-protocol/commits/main",
+      "sha256": "8f8f28e92e8d180b097a25f83e7a65481dfadd970fcd577b57fe7cda78c3ab78",
+      "observed": {
+        "sha": "7fdd78df677a94dce04c770644b0fbbb1401272b",
+        "committer_date": "2026-07-18T04:51:51Z"
+      }
+    },
+    {
+      "id": "x402_parent",
+      "url": "https://api.github.com/repos/coinbase/x402",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/coinbase/x402",
+      "sha256": "bbebdf6474f8f53ee4c664a6f49008ed7945544a9ac03fd92d11e75cc8bc0e15",
+      "observed": {
+        "fork": true,
+        "full_name": "coinbase/x402",
+        "parent": "x402-foundation/x402"
+      }
+    },
+    {
+      "id": "acp_maintainers",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/main/MAINTAINERS.md",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/main/MAINTAINERS.md",
+      "sha256": "ef1c0d452f8a01c4094a51452c8a00f41df1924e6b74005d96aa4cae28c15d2b",
+      "term_checks": {
+        "Meta": true
+      },
+      "excerpt": "Commerce Protocol. ## Lead maintainers - OpenAI - Stripe - Meta"
+    },
+    {
+      "id": "acp_operations",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/main/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/main/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml",
+      "sha256": "2a0aa239b4aed50732461d9b7e443ad98d5c2d3431277899433ead07cbd4fc55",
+      "term_checks": {
+        "retrieve (GET)": true
+      },
+      "assessment": "Use the pinned ACP source and extracted checkout operation list below."
+    },
+    {
+      "id": "ap2_model",
+      "url": "https://ap2-protocol.org/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://ap2-protocol.org/",
+      "sha256": "b5947d0a5ba78e23157e0116bda7ae7c244dd19a91420d74382ba255783a503e",
+      "term_checks": {
+        "two primary types": true
+      },
+      "excerpt": "at serve as the building blocks of a transaction. There are two primary types of mandates, each existing in two stages: Checkout",
+      "assessment": "Open and Closed types additionally checked against the dedicated checkout_mandate and payment_mandate specification pages."
+    },
+    {
+      "id": "stripe_redirect",
+      "url": "https://docs.stripe.com/agentic-commerce/protocol",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://docs.stripe.com/agentic-commerce/protocols/ucp",
+      "sha256": "40156b153860d8b7f9310597c2b485db5bf3ada9c7eb4869b0e93168c8e3e496",
+      "term_checks": {
+        "Universal Commerce Protocol": true
+      },
+      "excerpt": "Universal Commerce Protocol | Stripe Documentation Skip to content Universal Commerce Protocol Create account or Sign in The Stripe Docs logo Search"
+    },
+    {
+      "id": "mcp_version",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning",
+      "sha256": "97b505aa485da6861db44e9723a538bd243b147a56957e4cd5911fa7697aaf05",
+      "term_checks": {
+        "current protocol version": true
+      },
+      "excerpt": "pecifications, not yet ready for consumption. Current : the current protocol version, which is ready for use and may continue to receive"
+    },
+    {
+      "id": "google_ucp",
+      "url": "https://developers.google.com/merchant/ucp",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://developers.google.com/merchant/ucp",
+      "sha256": "fc9bb1af4186fd9b9837f61c29ec4875e7901ebb5ad8b17925184c141b65135b",
+      "term_checks": {
+        "REST API and MCP": true
+      },
+      "excerpt": "otocols such as AP2 , A2A , and MCP . It supports transport REST API and MCP binding. We provide adapters to"
+    },
+    {
+      "id": "google_version",
+      "url": "https://developers.google.com/merchant/ucp/guides/checkout/native",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/native-checkout-api",
+      "sha256": "33387e7161ecd4d44c15710f7e331d7fbcfbf7b3d2a571b3593d26cba0284bdb",
+      "term_checks": {
+        "2026-04-08": true
+      },
+      "excerpt": "gn in Implementation Home Guides Implementation FAQ Version 2026-04-08 Core implementation Publish your UCP profile Native checkout API Order lifecycle (post-purchase) Risk"
+    },
+    {
+      "id": "webbotauth",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/",
+      "sha256": "9ecee5dfdce39374d6127531d3256d7208f23a15d81d4aa063046f7e2b477674",
+      "term_checks": {
+        "WG Document": true,
+        "2026-10-29": true
+      },
+      "excerpt": "dditional resources Mailing list discussion Stream WG state WG Document Document shepherd (None) IESG IESG state I-D Exists Consensus boilerplate Unknown Telechat"
+    },
+    {
+      "id": "chrome_webmcp",
+      "url": "https://developer.chrome.com/docs/ai/webmcp",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://developer.chrome.com/docs/ai/webmcp",
+      "sha256": "77fd74f7129dd98dab18540b0b20717e13869ea0597b670aec1a8adad585db8c",
+      "term_checks": {
+        "origin trial": true,
+        "Chrome 149": true
+      },
+      "excerpt": "cs Build with Chrome Learn how Chrome works, participate in origin trials, and build with Chrome everywhere. Web Platform Isolated Web Apps"
+    },
+    {
+      "id": "chrome_status",
+      "url": "https://chromestatus.com/api/v0/features/5117755740913664",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://chromestatus.com/api/v0/features/5117755740913664",
+      "sha256": "110727fd7d3a22515da6c0f34fa1fad0464e3e37a4e07397da58117ebff0e8c6",
+      "observed": {
+        "name": "WebMCP",
+        "chrome_summary": {
+          "origintrial": false,
+          "status": "Proposed"
+        },
+        "trial_stages": [
+          {
+            "id": 5111811472621568,
+            "stage_type": 150,
+            "origin_trial_id": "4163014905550602241",
+            "desktop_first": 149,
+            "desktop_last": 156,
+            "extensions": [
+              {
+                "id": 5177104164585472,
+                "stage_type": 151,
+                "desktop_last": 162
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "webmcp_spec",
+      "url": "https://webmachinelearning.github.io/webmcp/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://webmachinelearning.github.io/webmcp/",
+      "sha256": "01f74ca962dbd323ed5ab43a850f117ad651f945a1090a9b11efb7fe4bc853bb",
+      "term_checks": {
+        "12 November 2026": true,
+        "not a W3C Standard": true
+      },
+      "excerpt": "WebMCP WebMCP Draft Community Group Report , 12 November 2026 More details about this document This version: https://webmachinelearning.github.io/webmcp Test Suite: https://wpt.fyi/results/webmcp Issue",
+      "assessment": "Document API must be checked in the IDL, not a literal dotted-name substring."
+    },
+    {
+      "id": "eu_timeline",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force",
+      "sha256": "0f86c31bb95de11f5a6975ab6a7625dafb1485d98f00fa351f3ffcd5e3f6d668",
+      "term_checks": {
+        "2 December 2027": true,
+        "2 August 2028": true
+      },
+      "excerpt": "es High-risk AI systems in Annex III : Rules apply starting 2 December 2027 High-risk AI embedded in physical products (machinery, toys,"
+    },
+    {
+      "id": "eu_law",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 202,
+      "final_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "term_checks": {
+        "December 2027": false,
+        "August 2028": false
+      },
+      "excerpt": "",
+      "assessment": "HTTP 202 returned no readable legislative text; timeline finding is attributed to the Commission publication, not independent inspection of enacted text."
+    },
+    {
+      "id": "mpp_spec",
+      "url": "https://paymentauth.org/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://paymentauth.org/",
+      "sha256": "56d9cb728d9eb2e686bc79f35bd0daa438a7eeb049ed62ed788386a26e566fc1",
+      "term_checks": {
+        "Authentication Scheme": true,
+        "Card": true,
+        "Lightning": true
+      },
+      "excerpt": "Specifications Source · Contributing ~/ The \"Payment\" HTTP Authentication Scheme TXT · XML · PDF ~/ Charge TXT · XML · PDF"
+    },
+    {
+      "id": "mpp_sdk",
+      "url": "https://mpp.dev/sdk",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://mpp.dev/sdk",
+      "sha256": "fea2125866d3aad78007a1e9b38767cd859633fbc8bb957e4c877fe19a64dd82",
+      "term_checks": {
+        "Python": true,
+        "Rust": true,
+        "Ruby": true
+      },
+      "excerpt": "Receipt Store HTML reference Html.init Custom CLI reference Python Rust Go Ruby Search... ⌘ K Docs SDKs Services Playground Blog IETF Specification"
+    },
+    {
+      "id": "mpp_identity",
+      "url": "https://mpp.dev/blog/expanded-identity-primitives",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://mpp.dev/blog/expanded-identity-primitives",
+      "sha256": "3203472aa02b41a57d3823ae5c9bcc6a79540c399ebac4de5e1e9cd9aa7f91d7",
+      "term_checks": {
+        "Identity runs next to": true
+      },
+      "excerpt": "ide payments MPP doesn't pick an identity provider for you. Identity runs next to the core payment flow, not inside it: Bring"
+    },
+    {
+      "id": "x402_upto",
+      "url": "https://docs.x402.org/schemes/upto",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://docs.x402.org/schemes/upto",
+      "sha256": "53ef04f05ec09f4283e1fa4b535f94c3516bd6a0454e3cbd3b17a79471b4fe5d",
+      "term_checks": {
+        "maximum": true,
+        "actual": true
+      },
+      "excerpt": "Upto Usage-based x402 payments where the buyer authorizes a maximum and the seller charges actual usage. The upto scheme lets a seller"
+    },
+    {
+      "id": "x402_batch",
+      "url": "https://docs.x402.org/schemes/batch-settlement",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://docs.x402.org/schemes/batch-settlement",
+      "sha256": "26d9f64fee1b0d4a236427256ecdf96c06ae89b8519c621aca72059c5be61a8a",
+      "term_checks": {
+        "voucher": true
+      },
+      "excerpt": "Settlement High-throughput payments with escrow, off-chain vouchers, and batched onchain redemption. Available on EVM and Solana (SVM). The batch-settlement scheme is for"
+    },
+    {
+      "id": "amp",
+      "url": "https://raw.githubusercontent.com/ant-intl/AMP/main/README.md",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/ant-intl/AMP/main/README.md",
+      "sha256": "210b0de3d05e7e3e5175308a3adfde3c8ee2d7a2eb83143e7e7e7147a735d15a",
+      "term_checks": {
+        "Human Not Present": true,
+        "src/python/": true
+      },
+      "excerpt": "| **Sample scenario** | **Launch script** | | --- | --- | | Human Not Present | bash ./samples/python/scenarios/human_not_present/start.sh | | Human"
+    },
+    {
+      "id": "vi",
+      "url": "https://raw.githubusercontent.com/agent-intent/verifiable-intent/main/README.md",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/agent-intent/verifiable-intent/main/README.md",
+      "sha256": "0939b0dc9173097e3be5e14a1e573538c9a367eea7d9f9001a925492f283fddb",
+      "term_checks": {
+        "Draft (v0.1)": true,
+        "Maintained by Mastercard": true
+      },
+      "excerpt": "verifiableintent.dev)** for full documentation. **Status**: Draft (v0.1). Maintained by Mastercard; open to multi-stakeholder contribution. See [CONTRIBUTING.md](CONTRIBUTING.md). Verifiable Intent defines a layered SD-JWT"
+    },
+    {
+      "id": "shopify_consent",
+      "url": "https://shopify.dev/changelog/posts/checkout-mcp-and-cart-mcp-now-support-ucp-buyer-consent",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://shopify.dev/changelog/posts/checkout-mcp-and-cart-mcp-now-support-ucp-buyer-consent",
+      "sha256": "e6a22f9490eaad6c76981597f128c980ef43fd86816a7c57e6121e5a3e3ab6ca",
+      "term_checks": {
+        "October 16, 2026": true,
+        "2026-08-25": true
+      },
+      "excerpt": "elog Subscribe All posts Blog & announcements Release notes October 16, 2026 Checkout MCP and Cart MCP now support UCP buyer consent"
+    },
+    {
+      "id": "shopify_location",
+      "url": "https://shopify.dev/changelog/posts/discover-a-merchant-s-retail-stores-with-ucp-location-search-and-lookup",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://shopify.dev/changelog/posts/discover-a-merchant-s-retail-stores-with-ucp-location-search-and-lookup",
+      "sha256": "f1f21dea7085990dcab191f06184d00eb5e160f29a6c74838a0b8fb9e1b5fc17",
+      "term_checks": {
+        "October 22, 2026": true
+      },
+      "excerpt": "elog Subscribe All posts Blog & announcements Release notes October 22, 2026 Discover a merchant's retail stores with UCP location search and"
+    },
+    {
+      "id": "shopify_permalink",
+      "url": "https://shopify.dev/changelog/posts/cart-and-checkout-permalinks-now-support-ucp-at-buy",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://shopify.dev/changelog/posts/cart-and-checkout-permalinks-now-support-ucp-at-buy",
+      "sha256": "3743295af7bd59171946c0744c78e77c09741a8a8bb821e2d0f3ed933773edde",
+      "term_checks": {
+        "October 28, 2026": true,
+        "dev.ucp.shopping.permalink": true
+      },
+      "excerpt": "elog Subscribe All posts Blog & announcements Release notes October 28, 2026 Cart and checkout permalinks now support UCP at /buy Install"
+    },
+    {
+      "id": "acp_pinned_maintainers",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/MAINTAINERS.md",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/MAINTAINERS.md",
+      "sha256": "ef1c0d452f8a01c4094a51452c8a00f41df1924e6b74005d96aa4cae28c15d2b",
+      "term_checks": {
+        "Meta": true
+      },
+      "excerpt": "Protocol. ## Lead maintainers - OpenAI - Stripe - Meta"
+    },
+    {
+      "id": "acp_pinned_operations",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml",
+      "sha256": "2a0aa239b4aed50732461d9b7e443ad98d5c2d3431277899433ead07cbd4fc55",
+      "observed": {
+        "checkout_operations": [
+          {
+            "path": "/checkout_sessions",
+            "method": "POST",
+            "operation_id": "createCheckoutSession"
+          },
+          {
+            "path": "/checkout_sessions/{checkout_session_id}",
+            "method": "POST",
+            "operation_id": "updateCheckoutSession"
+          },
+          {
+            "path": "/checkout_sessions/{checkout_session_id}",
+            "method": "GET",
+            "operation_id": "getCheckoutSession"
+          },
+          {
+            "path": "/checkout_sessions/{checkout_session_id}/complete",
+            "method": "POST",
+            "operation_id": "completeCheckoutSession"
+          },
+          {
+            "path": "/checkout_sessions/{checkout_session_id}/cancel",
+            "method": "POST",
+            "operation_id": "cancelCheckoutSession"
+          }
+        ],
+        "checkout_operation_count": 5
+      }
+    },
+    {
+      "id": "ap2_budget",
+      "url": "https://ap2-protocol.org/ap2/payment_mandate/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://ap2-protocol.org/ap2/payment_mandate/",
+      "sha256": "63e51c4f412fa66c670016d08b33aa2a20d8bc4b944cad615bafd5cbf9c07886",
+      "term_checks": {
+        "Budget": true
+      },
+      "excerpt": "Initiation Service Providers (PISPs) Amount Range Budget Reference Execution Date Payment Receipt ReceiptStatus Examples Open Payment Mandate SD-JWT plus disclosures"
+    },
+    {
+      "id": "emv_framework",
+      "url": "https://www.emvco.com/news-publications/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://www.emvco.com/news-publications/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/",
+      "sha256": "0f11b5116dce79c9eff368a1ae962032e4975ea763a13179b54b122822945e93",
+      "term_checks": {
+        "Intent Services": true
+      },
+      "excerpt": "ecifications therefore introduces the concept of ‘Intent Services’. Intent Services provide a shared, interoperable layer that enables payment participants to"
+    },
+    {
+      "id": "emv_update",
+      "url": "https://www.emvco.com/news-publications/advancing-secure-agentic-payments-highlights-from-the-emvco-hanoi-board-of-advisors-meeting/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://www.emvco.com/news-publications/advancing-secure-agentic-payments-highlights-from-the-emvco-hanoi-board-of-advisors-meeting/",
+      "sha256": "bd866736fa160531b1a17e29096cda6bdfce3b04391a0181ca0bcff93777322e",
+      "term_checks": {
+        "10 Nov 2026": true
+      },
+      "excerpt": "ts from the EMVCo Hanoi Board of Advisors Meeting 10 Nov 2026 | By Oliver Manahan Share this page In"
+    },
+    {
+      "id": "amex",
+      "url": "https://www.americanexpress.com/en-us/newsroom/technology-innovation/intent-intelligence-framework-agentic-commerce/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://www.americanexpress.com/en-us/newsroom/technology-innovation/intent-intelligence-framework-agentic-commerce/",
+      "sha256": "b0c9d0177a4d94971a06f889d757993f1d59a030f8ef326b96521f98e0d694e0",
+      "term_checks": {
+        "October 13, 2026": true
+      },
+      "excerpt": "ligence Framework for Trusted Agentic Commerce AI October 13, 2026 American Express Publishes Intent Intelligence Framework for Trusted Agentic Commerce"
+    },
+    {
+      "id": "mastercard",
+      "url": "https://www.mastercard.com/uz/uz/news-and-trends/press/2026/october/Mastercard-Agent-Pay-for-Machines-in-action.html",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "error": "HTTP Error 403: Forbidden",
+      "assessment": "Direct client was denied; source content was available through the web research tool. Do not classify as dead."
+    },
+    {
+      "id": "banks",
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/global-banks-collaborate-on-principles-for-trusted-agentic-comme.html",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/global-banks-collaborate-on-principles-for-trusted-agentic-comme",
+      "sha256": "b3988a1b691a68a31ee61d6f5c407d82ebb85643beb66cc8307fc40f6d0c3291",
+      "term_checks": {
+        "September 22, 2026": false
+      },
+      "excerpt": "Home | Newsroom | Bank of America You need to enable JavaScript to run this app.",
+      "assessment": "Direct response was a JavaScript shell, not article evidence; article content was available through the web research tool."
+    },
+    {
+      "id": "openai_discovery",
+      "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "error": "HTTP Error 403: Forbidden",
+      "assessment": "Direct client was denied; source content was available through the web research tool. Do not classify as dead."
+    },
+    {
+      "id": "openai_business",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "sha256": "ee6b185104357374df4a56231218971c0f5fcd5b693a05a541d18be15b4e7c6f",
+      "term_checks": {
+        "November 10, 2026": true
+      },
+      "excerpt": "Try ChatGPT (opens in a new window) Login OpenAI November 10, 2026 Product Introducing Businesses in ChatGPT Claim your business,"
+    },
+    {
+      "id": "google_canada",
+      "url": "https://blog.google/intl/en-ca/products/explore-get-answers/a-new-way-to-shop-introducing-a-more-intuitive-agentic-shopping-experience-for-consumers-and-retailers-in-canada/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://blog.google/intl/en-ca/products/explore-get-answers/a-new-way-to-shop-introducing-a-more-intuitive-agentic-shopping-experience-for-consumers-and-retailers-in-canada/",
+      "sha256": "c52ddb097da93e965b99fe3f6cc0fb68d9561ad2dcae15b788a774b3b4bab361",
+      "term_checks": {
+        "Nov 04, 2026": true
+      },
+      "excerpt": "experience for consumers and retailers in Canada Nov 04, 2026 | x.com Facebook Linkedin Mail Copy link We’re collaborating with"
+    },
+    {
+      "id": "meta_muse",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "sha256": "c8398f4a84c5006026bab278ca2833eddad086f89398a289421e5377c89219c8",
+      "term_checks": {
+        "September 8, 2026": true
+      },
+      "excerpt": "orld’s First Personal AI Agent Built for Everyone September 8, 2026 November 10, 2026 Listen to Article 10 Pause 10"
+    },
+    {
+      "id": "cfpb",
+      "url": "https://www.consumerfinance.gov/rules-policy/rules-under-development/personal-financial-data-rights-reconsideration/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "error": "HTTP Error 403: Forbidden",
+      "assessment": "Direct client was denied; source content was available through the web research tool. Do not classify as dead."
+    },
+    {
+      "id": "mpp_dated_index",
+      "url": "https://mpp.dev/",
+      "checked_on": "2026-11-13",
+      "method": "direct HTTPS GET",
+      "status": 200,
+      "final_url": "https://mpp.dev/",
+      "sha256": "7e4deec9fddfce310db05dc62944a5e407d92418d48fc39f2b3426b25ec399c1",
+      "term_checks": {
+        "November 11, 2026": true
+      },
+      "excerpt": "egrations, and more. Expanded identity primitives November 11, 2026 Use any identity protocol alongside MPP Expanding identity support in mppx"
+    }
+  ],
+  "review_outcomes": {
+    "confirmed": [
+      "x402 foundation parent",
+      "ACP Meta maintainer",
+      "ACP five checkout operations",
+      "AP2 two mandate types with open and closed forms",
+      "Stripe ACP-labeled URL redirects to UCP",
+      "MCP is an optional supported binding",
+      "Web Bot Auth WG draft exists",
+      "UCP and A2A release versions unchanged",
+      "AMP and VI implementation repositories exist",
+      "October Shopify UCP capability releases"
+    ],
+    "qualified": [
+      "ChromeStatus summary flags conflict with detailed origin-trial stage data",
+      "AP2 has a budget constraint; coordination alone is not proof of enforcement",
+      "EU dates supported by Commission publication; legislative text unreadable in this check",
+      "Instant Checkout sales characterization and claimed FTC policy remain unsubstantiated by the sources reviewed"
+    ],
+    "editorial": [
+      "product pruning",
+      "ADK catalog removal",
+      "plugin consolidation",
+      "partner-roster format",
+      "adoption and forecast placement"
+    ]
+  }
+}

@@ -6,6 +6,8 @@ This repository is a **reference point** to official resources. It does not own 
 
 Contributions are welcome — please read [CONTRIBUTING.md](./CONTRIBUTING.md) first. In short: this list indexes protocols, not products built on them, and corrections are the most valuable contribution you can make.
 
+Protocol versions and selected status claims were checked on **November 13, 2026**. See the [curation audit](./RESEARCH-2026-11-13.md) for sources and verification limits; dated announcements describe availability at publication, not necessarily current deployment support.
+
 ## Contents
 
 - [What is Agentic Commerce?](#what-is-agentic-commerce)
@@ -45,23 +47,24 @@ Agentic commerce is the emerging paradigm where AI agents act on behalf of users
 - How can agents from different platforms communicate?
 - How do you prove the user actually wanted this purchase?
 
-**The Solution:** A stack of complementary open protocols — commerce (UCP, ACP), payment authorization (AP2, MPP, AMP), agent communication (A2A), and the transport and tool layer beneath them (MCP, WebMCP) — plus a shared agent-identity layer ([Web Bot Auth](#web-bot-auth)). No single protocol covers the whole journey, and most real deployments combine several.
+**The Building Blocks:** Complementary protocols cover commerce (UCP, ACP), authorization evidence (AP2, Verifiable Intent), payment exchange (MPP, x402, L402), mobile wallet payments (AMP), agent communication (A2A), tools (MCP, WebMCP), and client identity ([Web Bot Auth](#web-bot-auth)). These are composable options; a purchase does not have to traverse every protocol.
 
 <br>
 
 ## Standards Bodies & Governance
 
-> Where each protocol actually lives, as of September 2026
+> Governance sources and selected standards updates, November 2026
 
-Through 2026 the major agentic protocols moved out of single-vendor stewardship and into neutral foundations. Knowing which body owns which spec matters more than it used to — it determines who can change the protocol and how fast.
+Governance differs by project. Foundation membership, contribution to a standards body, and maintenance of a reference implementation are distinct relationships; contribution does not itself make a draft a completed standard.
 
 | Body | Hosts | Notes |
 |------|-------|-------|
 | **Agentic AI Foundation (AAIF)** — Linux Foundation | MCP, A2A, goose, AGENTS.md | Formed December 9, 2025. Platinum members: AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, OpenAI. Runs an **Agentic Commerce working group**. |
 | **x402 Foundation** — Linux Foundation | x402 | Announced April 2, 2026 at MCP Dev Summit NA; operational launch July 14, 2026 with 40 founding members (17 premier, incl. Visa, Stripe, Solana Foundation). |
-| **FIDO Alliance** | AP2, Mastercard Verifiable Intent | Agentic Authentication TWG (CVS Health, Google, OpenAI) + Payments TWG (Mastercard, Visa), formed April 2026. |
+| **FIDO Alliance** | Standards work drawing on AP2 and Verifiable Intent | Agentic Authentication TWG and Payments TWG; the Verifiable Intent reference repository remains maintained by Mastercard and labeled Draft v0.1. |
 | **UCP Governing Council** | UCP | Google, Shopify, Stripe as permanent members plus elected open seats; Technical Committee (16 seats) and per-vertical Domain Technical Councils. |
-| **OpenAI + Stripe** | ACP | Still maintained directly by the two co-authors; no external foundation. |
+| **OpenAI + Stripe + Meta** | ACP | Lead maintainers listed in [MAINTAINERS.md](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/MAINTAINERS.md); the upstream README still names only OpenAI and Stripe. |
+| **EMVCo** | Agentic Payments – Framework for Specifications | Draft framework introducing Intent Services; the November 10 update reports public-review feedback being considered, not a completed standard. |
 
 ### 🎖️ Official Resources
 
@@ -70,6 +73,9 @@ Through 2026 the major agentic protocols moved out of single-vendor stewardship 
 - [x402 Foundation Operational Launch](https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications) - Linux Foundation, July 14, 2026
 - [FIDO Alliance: Trusted AI Agent Interactions](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/) - Working group formation
 - [Building the Trust Layer with AP2 and Verifiable Intent](https://fidoalliance.org/building-the-trust-layer-for-agentic-payments-with-ap2-and-verifiable-intent/) - FIDO Alliance
+- [EMVCo Agentic Payments Framework](https://www.emvco.com/news-publications/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/) - September 1, 2026 announcement of the draft and public review
+- [EMVCo November Framework Update](https://www.emvco.com/news-publications/advancing-secure-agentic-payments-highlights-from-the-emvco-hanoi-board-of-advisors-meeting/) - November 10, 2026 update on feedback and potential specifications
+- [Building Trust in Agentic Commerce](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/global-banks-collaborate-on-principles-for-trusted-agentic-comme.html) - September 22, 2026 industry principles from ASB, Bank of America, Capital One, Commonwealth Bank, ING, and NatWest; not regulation or a protocol specification
 
 <br>
 
@@ -77,8 +83,8 @@ Through 2026 the major agentic protocols moved out of single-vendor stewardship 
 
 > End-to-end commerce standard for AI agent transactions
 
-**Maintainers:** Google, Shopify, Stripe (Governing Council) + Etsy, Wayfair, Target, Walmart
-**Latest release:** [v2026-08-25](https://github.com/Universal-Commerce-Protocol/ucp/releases/tag/v2026-08-25) — multi-vertical refactor, vendor-neutral 3DS2, payment schedules
+**Governance:** UCP Governing Council — see [official announcements](https://ucp.dev/documentation/announcements/) for council membership and the [repository](https://github.com/Universal-Commerce-Protocol/ucp) for project roles
+**Latest release:** [v2026-08-25](https://github.com/Universal-Commerce-Protocol/ucp/releases/tag/v2026-08-25) — multi-vertical refactor, vendor-neutral 3DS2, payment schedules; [release history](https://github.com/Universal-Commerce-Protocol/ucp/releases) checked November 13, 2026
 **Cadence:** quarterly releases (agreed by the Technical Council, July 2026)
 
 ### What is UCP?
@@ -130,15 +136,7 @@ UCP expanded from a single spec into a multi-vertical program with dedicated cou
 
 ### 📊 Adoption Signal
 
-Independent crawler data from [UCP Checker](https://ucpchecker.com/blog/state-of-agentic-commerce-august-2026) (August 2026) — useful directionally, but read the caveats:
-
-- **15,735 verified storefronts**, up from 5,294 in May 2026 (+197%)
-- **99.82% of the fleet** converged on a single spec revision within a day of release
-- **MCP is the dominant transport**, reaching essentially the entire verified fleet
-- ⚠️ **Adoption is platform-driven, not merchant-driven.** Wix's arrival alone contributed ~5,198 stores (roughly a third of the fleet), and observed capabilities show near-zero deviation from platform templates
-- ⚠️ **Activation lags adoption.** Only 4 stores declared payment tokens (none production-ready); of 27 declaring identity linking, ~67% left it unconfigured
-
-The practical read: the spec is no longer the blocker at the median store — deployment and activation are.
+The [UCP Checker August 2026 report](https://ucpchecker.com/blog/state-of-agentic-commerce-august-2026) is a dated, independent crawler snapshot of discoverable storefronts and declared capabilities. Its findings about platform concentration and MCP coverage apply to that sample. Endpoint discovery does not establish active checkout usage, completed purchases, or current market-wide adoption.
 
 ### 🎖️ Official Resources
 
@@ -151,6 +149,7 @@ The practical read: the spec is no longer the blocker at the median store — de
 - [UCP and AP2](https://ucp.dev/documentation/ucp-and-ap2/) - How UCP uses AP2 for payment authorization
 - [UCP Versioning](https://ucp.dev/versioning/) - Version and capability-versioning policy
 - [Schema Authoring](https://ucp.dev/documentation/schema-authoring/) - Writing UCP schemas
+- [Stripe UCP Integration](https://docs.stripe.com/agentic-commerce/protocols/ucp) - Stripe's UCP integration documentation
 
 ### 🔌 Tools & Plugins
 
@@ -158,10 +157,10 @@ The practical read: the spec is no longer the blocker at the median store — de
 
 ### 🏪 Google Merchant Integration
 
-⚠️ **Version lag:** Google's merchant documentation is pinned to the **`2026-04-08`** spec, not the current `2026-08-25` release. If you are integrating against Google surfaces specifically, build to what these docs describe and treat the newer spec's changes as forward-looking. Lodging and Food are waitlist-only here.
+**Implementation version:** Google's native-checkout guide resolves to the **`2026-04-08`** implementation reference, checked November 13, 2026. Build to the version and capabilities documented for the particular Google surface; the current UCP release does not establish support for every August capability in that integration.
 
 - [Google Merchant UCP Guide](https://developers.google.com/merchant/ucp) - Google integration docs
-- [Native Checkout Guide](https://developers.google.com/merchant/ucp/guides/checkout/native) - Native checkout implementation
+- [Native Checkout Guide](https://developers.google.com/merchant/ucp/implementation/2026-04-08/native-checkout-api) - Google's versioned native checkout implementation
 - [Embedded Checkout Guide](https://developers.google.com/merchant/ucp/guides/checkout/embedded) - Embedded checkout implementation
 - [UCP FAQ](https://developers.google.com/merchant/ucp/faq) - Frequently asked questions
 
@@ -172,6 +171,9 @@ The practical read: the spec is no longer the blocker at the median store — de
 - [UCP Conformance Tests](https://github.com/Universal-Commerce-Protocol/conformance) - Compliance testing
 - [Shopify UCP](https://shopify.engineering/ucp) - Shopify's implementation
 - [Shopify Agent Docs](https://shopify.dev/docs/agents) - Shopify agent integration
+- [Shopify UCP Buyer Consent](https://shopify.dev/changelog/posts/checkout-mcp-and-cart-mcp-now-support-ucp-buyer-consent) - October 16, 2026 support for `dev.ucp.shopping.buyer_consent` in Checkout MCP and Cart MCP on UCP `2026-08-25`
+- [Shopify UCP Location Search and Lookup](https://shopify.dev/changelog/posts/discover-a-merchant-s-retail-stores-with-ucp-location-search-and-lookup) - October 22, 2026 store discovery; checkout for pickup at the selected location is not supported
+- [Shopify UCP Permalinks](https://shopify.dev/changelog/posts/cart-and-checkout-permalinks-now-support-ucp-at-buy) - October 28, 2026 support for `dev.ucp.shopping.permalink` at the `/buy` endpoint
 
 ### 📰 Announcements
 
@@ -191,28 +193,28 @@ The practical read: the spec is no longer the blocker at the median store — de
 
 > Open standard for programmatic commerce between AI agents and businesses
 
-**Maintainers:** OpenAI, Stripe (originally co-created with Meta)
-**Latest stable version:** `2026-04-17` (cart, feed, orders, authentication, MCP compatibility) — unchanged as of September 2026; active work sits in the repo's `unreleased/` directory
+**Maintainers:** OpenAI, Stripe, Meta — per the [lead maintainer file](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/MAINTAINERS.md); the upstream README still names only OpenAI and Stripe
+**Latest published snapshot:** `2026-04-17` (beta; cart, feed, orders, authentication, MCP compatibility) — [spec directory](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/main/spec) checked November 13, 2026; proposed work also sits in `unreleased/`
 **Status:** Beta, Apache 2.0, date-based versioning
 
 ### What is ACP?
 
-ACP enables AI agents to complete purchases on behalf of users directly within chat interfaces—like buying products without leaving a ChatGPT conversation. It powers features like "Instant Checkout" where users can discover and purchase items seamlessly.
+ACP defines interfaces for agent-assisted commerce, including checkout, product feeds, and delegated payments. It initially powered ChatGPT's Instant Checkout experience. OpenAI's March 2026 product update shifted emphasis toward discovery and merchant-controlled checkout; that product change does not remove the protocol's checkout specification.
 
 **Key Concepts:**
 - **Shared Payment Token (SPT)** - A secure, one-time-use token that lets agents initiate payments without ever seeing the user's card number. The token is scoped to a specific merchant and cart total.
-- **Agentic Checkout** - A RESTful API (or MCP server) that merchants implement with four endpoints: create, update, complete, and cancel checkout
+- **Agentic Checkout** - A REST API with an optional MCP binding; the [checkout schema](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml) defines five operations across four paths: create, update, retrieve, complete, and cancel
 - **Delegated Payment** - The flow where Stripe (or another PSP) issues an SPT, and the agent passes it to the merchant to complete the transaction
 
-**Why it matters:** ACP separates payment credentials from the agent entirely. The user pays through Stripe's secure interface, receives an SPT, and the agent never touches sensitive payment data—solving the PCI compliance challenge for AI commerce.
+**Why it matters:** Delegated payment tokens reduce the agent's exposure to raw card credentials. Tokenization alone does not establish an integration's PCI compliance; responsibilities depend on the payment flow and systems involved.
 
-### 📌 Current Status (September 2026)
+### 📌 Current Status (November 13, 2026)
 
-ACP has been quiet since April 2026 while UCP shipped two releases. Worth understanding the shape of where it landed:
+Keep published specifications, repository work, and platform product availability separate:
 
-- **No new spec since `2026-04-17`.** Released versions are `2025-09-29`, `2025-12-12`, `2026-01-16`, `2026-01-30`, `2026-04-17`. New work is staged in `unreleased/`.
-- **The protocol outlived its flagship product.** OpenAI retired Instant Checkout in March 2026 after roughly five months of near-zero sales, repositioning ACP toward product discovery and merchant feeds, with checkout handed back to the merchant side and dedicated retailer apps (Walmart, Target, Instacart) inside ChatGPT.
-- **Meta is a significant ACP surface.** Facebook's native "Buy now" checkout is Stripe-powered over ACP, with Instagram ads slated to follow.
+- **Latest published snapshot remains `2026-04-17`.** Dated spec directories are `2025-09-29`, `2025-12-12`, `2026-01-16`, `2026-01-30`, `2026-04-17`. Proposed work is staged in `unreleased/`.
+- **OpenAI changed the checkout experience.** Its [March 24 announcement](https://openai.com/index/powering-product-discovery-in-chatgpt/) describes expanding ACP for product discovery and connecting users to merchant-owned checkout. It does not quantify Instant Checkout sales or establish that ACP is now discovery-only.
+- **Meta integration is separately documented.** [Stripe's Facebook checkout announcement](https://stripe.com/newsroom/news/checkout-for-facebook) describes that integration; it does not establish that every Meta shopping surface uses ACP.
 - ⚠️ **Naming collision to watch:** the widely-cited "2026-07-28" release is the **MCP** specification, *not* ACP. Several secondary sources conflate the two.
 
 ### 🎖️ Official Resources
@@ -220,8 +222,7 @@ ACP has been quiet since April 2026 while UCP shipped two releases. Worth unders
 - [Agentic Commerce Portal](https://www.agenticcommerce.dev/) - Main hub
 - [ACP GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) - Draft spec and examples
 - [OpenAI Commerce Docs](https://developers.openai.com/commerce/) - OpenAI documentation
-- [Stripe ACP Docs](https://docs.stripe.com/agentic-commerce) - Stripe integration
-- [ACP Protocol Integration](https://docs.stripe.com/agentic-commerce/protocol) - Protocol details
+- [Stripe Agentic Commerce Documentation](https://docs.stripe.com/agentic-commerce) - Stripe's integration overview across supported protocols
 
 ### 🔌 Tools & Plugins
 
@@ -229,7 +230,7 @@ ACP has been quiet since April 2026 while UCP shipped two releases. Worth unders
 
 ### 📋 Specifications
 
-All OpenAPI specs below are from the current stable snapshot, `2026-04-17`.
+All OpenAPI specs below are from the latest published snapshot, `2026-04-17`; the protocol remains beta.
 
 - [Spec Directory (all versions)](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/main/spec) - Every dated snapshot plus `unreleased/`
 - [Agentic Checkout Spec](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml) - Checkout OpenAPI spec
@@ -266,30 +267,30 @@ All OpenAPI specs below are from the current stable snapshot, `2026-04-17`.
 > Secure payment authorization for agent-led transactions using cryptographic mandates
 
 **Maintainers:** FIDO Alliance (donated by Google, April 2026)
-**Partners:** 60+ at launch (September 2025), passing 100 by late October 2025
-**Latest version:** v0.2.0, released April 28, 2026 (introduces "Human Not Present" autonomous payments) — still current as of September 2026; no v0.3
-**Standardization:** Now progressing through the FIDO Agentic Authentication TWG and Payments TWG rather than as standalone releases
+**Ecosystem:** See [official project documentation](https://ap2-protocol.org/) for participants and implementation resources
+**Latest version:** v0.2.0, released April 28, 2026 (introduces "Human Not Present" autonomous payments) — [changelog](https://github.com/google-agentic-commerce/AP2/blob/main/CHANGELOG.md) checked November 13, 2026
+**Standardization:** Work through the FIDO Agentic Authentication TWG and Payments TWG is distinct from the repository's release history
 **Roadmap:** Digital wallets, push payment methods (UPI, PIX), digital currencies
 
 ### What is AP2?
 
-AP2 solves a fundamental problem: **How do you prove a user actually authorized an agent to make a purchase?** Today's payment systems assume a human is clicking "buy." When an autonomous agent makes a purchase—especially when the user isn't present—there's no proof of intent.
+AP2 models how payment participants verify authorization when an agent makes a purchase, including when the user is absent.
 
-AP2 introduces **Mandates**: tamper-proof, cryptographically-signed digital contracts that serve as verifiable evidence of user authorization.
+AP2 introduces **Mandates**: cryptographically signed, tamper-evident records of authorization. A valid signature verifies the signed record; it does not guarantee that a system correctly interpreted the user's wishes.
 
 > ⚠️ **Terminology change (2026):** what earlier documentation called the **Cart Mandate** is now the **Checkout Mandate**. The spec site was reorganized under `/ap2/*` paths and older `/topics/*` and `/specification/` URLs no longer resolve. Material written before mid-2026 — including most tutorials — still uses the old names.
 
 **Key Concepts:**
-- **Checkout Mandate** *(formerly Cart Mandate)* - Authorizes completion of a specific checkout. The Shopping Agent composes the content, a Trusted Surface displays it to the user, and the Merchant verifies and signs the enclosed Checkout object. This is the non-repudiable proof of intent.
-- **Payment Mandate** - Conveyed separately to credential providers and merchants, and potentially shared with networks and issuers. Signals that an agent is involved, enabling appropriate risk assessment and dispute resolution.
-- **Intent Mandate** - Pre-authorization for future purchases with constraints. Example: "Buy concert tickets under $100 when they go on sale." The agent can act autonomously within these bounds.
+- **Checkout Mandate** *(formerly Cart Mandate)* - Authorizes checkout completion; its closed form includes a merchant-signed Checkout object
+- **Payment Mandate** - Authorizes payment for the checkout and carries payment details or constraints for verification by payment participants
+- **Open and Closed Mandates** - Both mandate types have open and closed forms: open mandates express constraints for later execution, while closed mandates bind concrete checkout or payment details. The current model has two primary types, not a third Intent Mandate type
 - **Agent Authorization Framework** - A distinct specification section covering how an agent's authority is established and verified.
 
 **Roles:** Shopping Agent (discovery, checkout construction, execution) · Credential Provider (sources credentials, verifies agent authorization) · Merchant (catalog, fulfillment) · Merchant Payment Processor · **Trusted Surface** (the UI that obtains user consent before a mandate is created) · Network and Issuer.
 
 **Positioning:** AP2 now describes itself as an extension for **A2A, MCP, and UCP** — the explicit UCP alignment is newer than the original framing.
 
-**Why it matters:** When disputes arise ("I didn't authorize this!"), AP2 mandates provide cryptographic proof of exactly what the user approved. This protects merchants, payment providers, and users in the new world of autonomous agent purchases.
+**Why it matters:** Mandates provide evidence that payment participants can verify against authorization constraints. They support audit and dispute handling without independently determining legal liability. See the [mandate model](https://ap2-protocol.org/ap2/specification/).
 
 ### 🎖️ Official Resources
 
@@ -307,7 +308,7 @@ AP2 introduces **Mandates**: tamper-proof, cryptographically-signed digital cont
 - [Agent Authorization Framework](https://ap2-protocol.org/ap2/agent_authorization/) - How agent authority is established and verified
 - [Flows](https://ap2-protocol.org/ap2/flows/) - Human-present and human-not-present transaction flows
 - [Checkout Mandate](https://ap2-protocol.org/ap2/checkout_mandate/) - Authorizing checkout completion (formerly Cart Mandate)
-- [Payment Mandate](https://ap2-protocol.org/ap2/payment_mandate/) - Signalling agent involvement to networks and issuers
+- [Payment Mandate](https://ap2-protocol.org/ap2/payment_mandate/) - Open and closed payment authorization, including recurrence and budget constraints
 - [Security and Privacy Considerations](https://ap2-protocol.org/ap2/security_and_privacy_considerations/) - Security model
 - [Implementation Considerations](https://ap2-protocol.org/ap2/implementation_considerations/) - Practical guidance
 - [FAQ](https://ap2-protocol.org/faq/) - Common questions
@@ -337,7 +338,7 @@ AP2 introduces **Mandates**: tamper-proof, cryptographically-signed digital cont
 
 **Co-Authors:** Stripe, Tempo
 **Launched:** March 18, 2026, alongside Tempo mainnet
-**Spec home:** [mpp.dev](https://mpp.dev)
+**Documentation:** [mpp.dev](https://mpp.dev); [specification index](https://paymentauth.org/) — checked November 13, 2026
 
 ### What is MPP?
 
@@ -347,15 +348,19 @@ MPP is an open, HTTP-native standard for autonomous agent micropayments. A serve
 - **Sessions** - A primitive that bundles multiple micropayments into a single authorized context, reducing friction for high-frequency agent transactions
 - **Streaming payments** - Added as a first-class primitive at Stripe Sessions 2026 (April 29–30). Bills per-token, per-second, or per-call usage in real time against a stablecoin balance
 - **Micropayments** - Designed for small-value, high-volume payments typical of agent-to-agent and agent-to-service interactions
-- **Multi-Rail Support** - Cards via Shared Payment Tokens (min 0.50 USD), stablecoins via Tempo (min 0.01 USDC), plus Visa card rails and Bitcoin Lightning through Lightspark
+- **Payment Methods** - A method-independent HTTP authentication framework with separate specifications for methods including card, Stripe, Tempo, and Lightning; credential mechanisms and limits depend on the method and implementation
 
-**Relationship to x402:** MPP shares a signature substrate with x402 (EIP-3009 and Permit2 for off-chain authorization) but adds the lifecycle machinery — subscriptions, streaming usage, cancellation, and reconciliation — that raw HTTP 402 leaves out.
+**Relationship to x402:** Both define payment exchanges over HTTP. MPP's cryptographic mechanisms depend on its [payment method](https://paymentauth.org/), so EIP-3009 or Permit2 is not a universal MPP substrate. x402 also documents [usage-based charging](https://docs.x402.org/schemes/upto) and [batch settlement](https://docs.x402.org/schemes/batch-settlement); compare specific methods, schemes, and SDK support rather than attributing those capabilities exclusively to MPP.
 
 **Why it matters:** As AI agents consume paid APIs, purchase digital goods, and transact with other agents autonomously, traditional checkout flows break down. MPP provides a purpose-built payment layer for machine-to-machine commerce at scale.
 
 ### 🎖️ Official Resources
 
-- [MPP Protocol Site](https://mpp.dev) - Official specification home
+- [MPP Protocol Site](https://mpp.dev) - Official documentation and implementation guides
+- [MPP Specifications](https://paymentauth.org/) - Payment authentication, payment methods, discovery, and transport drafts
+- [Payment HTTP Authentication Draft](https://paymentauth.org/draft-httpauth-payment-01.html) - Method-independent HTTP payment authentication
+- [MPP SDKs](https://mpp.dev/sdk) - TypeScript, Python, Rust, Go, and Ruby SDKs with a feature-support matrix
+- [MPP Expanded Identity Primitives](https://mpp.dev/blog/expanded-identity-primitives) - November 11, 2026 SDK update for optional identity verification alongside the core payment flow
 - [Stripe Blog: Introducing MPP](https://stripe.com/blog/machine-payments-protocol) - Launch announcement
 - [MPP Stripe Docs](https://docs.stripe.com/payments/machine/mpp) - Integration documentation
 - [Machine Payments Sample App](https://github.com/stripe-samples/machine-payments) - Complete reference implementation
@@ -385,15 +390,19 @@ MPP is an open, HTTP-native standard for autonomous agent micropayments. A serve
 
 ### What is AMP?
 
-AMP is the first agentic payment protocol designed natively for mobile interfaces — smartphones, smartwatches, AR glasses, and in-car systems — rather than card-based desktop checkout. It establishes a universal, auditable standard for AI agents to transact across digital wallets and super apps.
+AMP is an agentic payment framework for mobile interfaces, digital wallets, and super apps. Its reference implementation includes mandate-chain libraries and examples for human-present and autonomous payments.
 
 **Key Concepts:**
 - **KYA (Know Your Agent) Framework** - Establishes an agent's digital identity and certifies its authorized capabilities, parallel to KYC for humans
 - **Agent Trust Rating** - Dynamic risk-management score that determines an agent's trustworthiness and controls its level of autonomy
-- **Money-back Guarantee** - Every agent-initiated transaction is backed by a refund mechanism for payment partners in cases of account takeover
+- **Money-back Guarantee** - Launch materials describe refund protection for payment partners in account-takeover cases; consult the applicable program terms for coverage
 - **Cross-device Compatibility** - Designed for non-card form factors absent from traditional payment rails
 
 **Why it matters:** The Alipay+ network reaches 1.8B user accounts and 150M merchants globally — primarily across APAC. AMP gives this footprint an agentic-commerce layer and complements card-based protocols (Visa TAP, Mastercard Agent Pay) for emerging markets where mobile wallets dominate.
+
+### 🎖️ Official Resources
+
+- [AMP GitHub](https://github.com/ant-intl/AMP) - Official protocol documentation, Python libraries, tests, and human-present and autonomous payment samples
 
 ### 🚀 Phase I Rollout (September 2026)
 
@@ -416,7 +425,7 @@ AMP moved from announcement to production in September 2026:
 > Open standard for AI agent interoperability and communication
 
 **Maintainers:** Agentic AI Foundation (Linux Foundation) — Growth Stage project since August 27, 2026; originally created by Google
-**Latest version:** v1.0.1 (May 28, 2026); v1.0.0 on March 12, 2026 was the first stable, production-ready release
+**Latest version:** [v1.0.1](https://github.com/a2aproject/A2A/releases) — GitHub publication May 28, 2026, embedded changelog dated May 26; checked November 13, 2026. v1.0.0 was released March 12, 2026
 **Backing:** 150+ organizations; adopted across Google Cloud, AWS, and Microsoft Azure
 
 ### What is A2A?
@@ -480,14 +489,14 @@ Think of it as the "common language" that lets a travel planning agent talk to a
 
 ## MCP - Model Context Protocol
 
-> Agent-to-tool communication — and, in practice, the dominant transport for agentic commerce
+> Agent-to-tool communication, including optional bindings for commerce protocols
 
 **Maintainers:** Agentic AI Foundation (Linux Foundation), donated by Anthropic December 2025
-**Latest version:** `2026-07-28` — the largest revision since launch
+**Latest version:** `2026-07-28` — [official versioning](https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning) checked November 13, 2026
 
 ### Why MCP belongs in an agentic commerce list
 
-MCP started as a tool-access standard, but it has become load-bearing commerce infrastructure. UCP's dominant transport is MCP — reaching essentially the entire verified storefront fleet — ACP ships MCP compatibility as of its `2026-04-17` release, and Shopify's public agentic endpoint is an MCP server. If you are implementing UCP or ACP, you are implementing MCP.
+MCP lets agents invoke commerce tools through a common interface. UCP supports REST and MCP, and ACP provides a REST API alongside its MCP binding. Implementing either commerce protocol does **not** require MCP. Choose the binding supported by the integration: see [Google's UCP overview](https://developers.google.com/merchant/ucp) and [ACP's checkout API](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/spec/2026-04-17/openapi/openapi.agentic_checkout.yaml).
 
 ### 🆕 What Changed in `2026-07-28`
 
@@ -515,7 +524,7 @@ MCP started as a tool-access standard, but it has become load-bearing commerce i
 **Venue:** W3C Web Machine Learning Community Group (incubation — **not** a W3C Standard or on the Standards Track)
 **Authors:** Google and Microsoft engineers
 **API surface:** `document.modelContext`
-**Spec:** [webmachinelearning.github.io/webmcp](https://webmachinelearning.github.io/webmcp)
+**Spec:** [Draft Community Group Report, November 12, 2026](https://webmachinelearning.github.io/webmcp/) — checked November 13, 2026
 **Vendor positions:** Mozilla **neutral**; WebKit/Safari **oppose** — see [Vendor Positions](#-vendor-positions-authoritative) before building on this
 
 ### What is WebMCP?
@@ -549,11 +558,11 @@ Discussion is ongoing and the spec authors have signalled willingness to converg
 
 ### 📊 Reported Implementation Status
 
-⚠️ **Sources conflict here — verify before relying on it.**
+**Chrome origin trial:** [Chrome's documentation](https://developer.chrome.com/docs/ai/webmcp), updated October 7, documents a trial starting in **Chrome 149** and local testing via `about:flags#enable-webmcp-testing`.
 
-The spec repo's own [implementation-status.md](https://github.com/webmachinelearning/webmcp/blob/main/implementation-status.md) reports Origin Trials live in **Chrome 149** and **Edge 150**, experimental support in Brave's Leo, and support in ChatGPT Desktop. Local development uses the `about:flags#enable-webmcp-testing` flag.
+**Metadata discrepancy:** checked November 13, the [ChromeStatus API](https://chromestatus.com/api/v0/features/5117755740913664) still says `Proposed` and `origintrial: false` in its summary, but detailed trial stage `5111811472621568` records an origin trial beginning at milestone 149. The detailed record supports Chrome's documentation; the summary flags are inconsistent. An origin trial is not general availability.
 
-However, the [Chrome Platform Status entry](https://chromestatus.com/feature/5117755740913664) still lists WebMCP as **"Proposed"** with no origin trial flag set, and records "No signal" for Firefox and Safari — which the closed standards-positions issues above show is out of date. Treat the spec repo as a motivated source on its own adoption, and the vendor positions table as the reliable signal.
+The spec repository's [implementation-status.md](https://github.com/webmachinelearning/webmcp/blob/main/implementation-status.md) separately reports Edge, Brave, and ChatGPT Desktop support. Treat these as repository-reported claims and verify the particular vendor's support before relying on them. Standards positions above describe design assessments, not promises of browser implementation.
 
 ### ⚠️ Other Caveats
 
@@ -564,6 +573,7 @@ However, the [Chrome Platform Status entry](https://chromestatus.com/feature/511
 
 - [WebMCP on Chrome for Developers](https://developer.chrome.com/docs/ai/webmcp) - Official Chrome documentation and origin trial details
 - [WebMCP Explainer (W3C Community Group)](https://github.com/webmachinelearning/webmcp) - Specification and design discussion
+- [WebMCP Draft Specification](https://webmachinelearning.github.io/webmcp/) - Document-level API, conformance requirements, and links to Web Platform Tests; Community Group incubation
 - [Implementation Status](https://github.com/webmachinelearning/webmcp/blob/main/implementation-status.md) - Spec repo's own per-browser support claims
 - [Chrome Platform Status entry](https://chromestatus.com/feature/5117755740913664) - Maturity and browser signals
 - [Mozilla standards position (neutral)](https://github.com/mozilla/standards-positions/issues/1412) - Firefox's formal position
@@ -577,11 +587,11 @@ However, the [Chrome Platform Status entry](https://chromestatus.com/feature/511
 
 ## Web Bot Auth
 
-> Cryptographic agent identity — the layer most commerce protocols quietly depend on
+> Cryptographic client identity for automated HTTP requests
 
 **Originator:** Cloudflare
 **Mechanism:** HTTP Message Signatures ([RFC 9421](https://www.rfc-editor.org/rfc/rfc9421.html)) — an Ed25519 key, a `Signature-Agent` header, and a published JWKS directory
-**Standards status:** IETF working group chartered October 23, 2025 (chairs David Schinazi and Rifaat Shekh-Yusef). ⚠️ **No draft adopted as of 2026** — it is shipping in production well ahead of standardization.
+**Standards status:** Active IETF working-group Internet-Draft, [draft-ietf-webbotauth-httpsig-protocol-01](https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/), updated October 29, 2026; checked November 13, 2026. An adopted WG draft, not an RFC
 
 ### Why it belongs here
 
@@ -593,12 +603,13 @@ Web Bot Auth answers a question none of the commerce protocols answer on their o
 - **OpenAI** signs ChatGPT agent and agentic requests with it
 - **UCP** has tracked Web Bot Auth interoperability in its release planning
 
-If you are building an agent that touches real merchants, this is likely to affect you before any commerce protocol does.
+Client authentication and purchase authorization are separate: a valid agent signature does not itself prove that a shopper authorized a transaction.
 
 ### 🎖️ Official Resources
 
 - [Web Bot Auth](https://www.webbotauth.com/) - Overview and adoption
 - [IETF Web Bot Auth Working Group](https://datatracker.ietf.org/wg/webbotauth/about/) - Charter and drafts
+- [Web Bot Auth HTTP Signature Draft](https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/) - Adopted working-group draft and revision history
 - [Cloudflare web-bot-auth](https://github.com/cloudflare/web-bot-auth) - Reference implementation
 - [RFC 9421: HTTP Message Signatures](https://www.rfc-editor.org/rfc/rfc9421.html) - The underlying signature standard
 - [Securing Agentic Commerce](https://blog.cloudflare.com/secure-agentic-commerce/) - Cloudflare on Web Bot Auth under Visa and Mastercard protocols
@@ -607,50 +618,44 @@ If you are building an agent that touches real merchants, this is likely to affe
 
 ## How They Relate
 
-```
-User → AI Agent → Web Bot Auth (cryptographic agent identity)
-                → A2A (agent discovery & coordination)
-                → MCP / WebMCP (tool & transport layer)
-                → UCP/ACP (commerce actions)
-                → AP2 (payment authorization)
-                → MPP (agent micropayments)
-                → Payment Rails (Stripe, Visa TAP, Mastercard, PayPal, x402, L402)
-                → Merchants & Payment Networks
-```
+The table groups related responsibilities; it is not a mandatory execution sequence. Commerce semantics, authorization evidence, client identity, tool access, payment exchange, and settlement can be combined according to the integration. Payment providers and networks supply implementations and rails rather than another required protocol step.
 
 | Protocol | Layer | Purpose | Governance |
 |----------|-------|---------|------------|
-| **Web Bot Auth** | Identity | Agents cryptographically prove who they are, per request | IETF WG (no adopted draft yet) |
-| **MCP** | Transport / Tools | Agents reach tools and data; the de facto transport for UCP and ACP | AAIF (Linux Foundation) |
-| **WebMCP** | Transport / Browser | Pages expose tools to in-browser agents | W3C Community Group (incubation) |
+| **Web Bot Auth / Visa TAP** | Client identity | Authenticate automated requests; identity alone does not authorize a purchase | IETF WG draft / Visa |
+| **MCP** | Tools | Agents reach tools and data; optional UCP and ACP bindings | AAIF (Linux Foundation) |
+| **WebMCP** | Browser tools | Pages expose tools to in-browser agents | W3C Community Group (incubation) |
 | **A2A** | Communication | Agents discover and talk to each other | AAIF (Linux Foundation) |
 | **UCP** | Commerce | End-to-end commerce across shopping, food, and lodging | UCP Governing Council |
-| **ACP** | Commerce | Agent checkout and product discovery (OpenAI/Stripe ecosystem) | OpenAI + Stripe |
-| **AP2** | Payments | Secure payment authorization with mandates | FIDO Alliance |
-| **MPP** | Payments | Autonomous agent micropayments, sessions, and streaming | Stripe + Tempo |
+| **ACP** | Commerce | Checkout, product feeds, and delegated payment interfaces | OpenAI + Stripe + Meta |
+| **AP2** | Authorization evidence | Checkout and Payment mandates, each with open and closed forms | FIDO Alliance standards work |
+| **Verifiable Intent** | Authorization evidence | Verifiable intent, delegation constraints, and credential verification | Mastercard reference implementation; contributed to FIDO work |
+| **MPP** | Payment exchange | HTTP payment authentication with method-specific payment flows | Stripe + Tempo |
 | **AMP** | Payments | Mobile-first agentic payments via digital wallets (Alipay+) | Ant International |
-| **x402** | Crypto Rails | HTTP 402 stablecoin payments | x402 Foundation (Linux Foundation) |
-| **L402** | Crypto Rails | Lightning Network micropayments with Macaroons | Lightning Labs |
-| **Visa TAP / Mastercard Verifiable Intent / PayPal Agent Ready** | Fiat Rails | Card network and wallet infrastructure for agent transactions | Respective networks; KYA interop in progress |
+| **x402** | Payment exchange | HTTP payment negotiation and settlement schemes | x402 Foundation (Linux Foundation) |
+| **L402** | Payment exchange / API access | Lightning payments with Macaroon authorization tokens | Lightning Labs |
 
 ### Example: Planning a Trip
 
-1. **A2A** - Your personal agent discovers a flight agent, hotel agent, and car rental agent
-2. **A2A** - Agents collaborate to find options within your $700 budget
-3. **AP2** - You create an Intent Mandate: "Book travel under $700 total"
-4. **UCP/ACP** - Each agent executes checkout with their respective merchants
-5. **AP2** - Checkout Mandates are signed for each booking, providing proof of your approval
-6. **Result** - Three coordinated bookings, all cryptographically tied to your authorization
+This is an illustrative composition, not a reference implementation or a guarantee of cross-merchant atomicity.
+
+1. **A2A** - Your personal agent discovers flight, hotel, and car rental agents and coordinates options
+2. **AP2** - A trusted surface obtains your authorization for open Checkout and Payment mandates with applicable merchant, item, and payment constraints
+3. **Budget enforcement** - For a $700 recurring payment budget, the implementation evaluating the constraint tracks prior presentations and checks each proposed payment against the remaining allowance, as required by the [Payment Mandate specification](https://ap2-protocol.org/ap2/payment_mandate/)
+4. **UCP/ACP** - Agents use the commerce interface supported by each merchant to prepare checkout
+5. **AP2** - Closed mandates bind the concrete checkout and payment details within the authorized constraints
+6. **Result** - Bookings have verifiable authorization records; handling a later booking failure, cancellation, or refund still requires application logic
 
 ### UCP vs ACP
 
-Both enable commerce, but target different ecosystems:
-- **UCP** - Google AI surfaces (Search AI Mode, Gemini), supports identity linking, uses AP2 for payments
-- **ACP** - OpenAI/ChatGPT ecosystem, uses Shared Payment Tokens via Stripe
+Both define commerce interfaces, with different integration surfaces and capabilities:
+
+- **UCP** - Commerce capabilities including identity linking, order management, and AP2 mandate support; Google and Shopify publish implementation guides
+- **ACP** - Checkout, feeds, and delegated payment interfaces, including Shared Payment Token flows; OpenAI and Stripe publish integration guides
 
 Merchants wanting maximum reach may implement both — or sit behind an [integration layer](#integration--orchestration-layer) that speaks several protocols at once.
 
-**Divergence through 2026:** UCP shipped two releases between April and September 2026 and expanded into food and lodging verticals, while ACP has held at `2026-04-17` and narrowed toward discovery and feeds after Instant Checkout was retired. That asymmetry is the single biggest change in the commerce layer this year — though ACP retains reach through ChatGPT and Meta surfaces that UCP does not touch.
+**Version and product distinction:** As checked November 13, UCP's latest release is `2026-08-25` and ACP's latest published snapshot is `2026-04-17` (beta). OpenAI's shift toward discovery and merchant-controlled checkout is a product-strategy change; it should not be read as removal of ACP's checkout API or exclusive platform support for either protocol.
 
 <br>
 
@@ -667,17 +672,20 @@ x402 leverages HTTP's `402 Payment Required` status code for instant stablecoin 
 
 **Governance timeline:** Coinbase and Cloudflare announced their intent to form the foundation in September 2025. The Linux Foundation announced the x402 Foundation on **April 2, 2026** at MCP Dev Summit North America, and declared its **operational launch on July 14, 2026** with 40 founding member organizations — 17 of them premier members, including Visa, Stripe, and the Solana Foundation.
 
-⚠️ **Adoption reality check.** Headline figures (roughly 69,000 active agents, 165M transactions, and ~$50M cumulative volume as of April 2026) sit alongside on-chain data showing only about **$28,000 in genuine daily volume**, much of it testing or incentive-gamed activity. The infrastructure and backing are real; organic demand is not yet.
+**Adoption evidence:** Transaction counts, active wallets, and verified commercial purchases measure different things. The March 2026 reporting linked below is historical analysis, not a current estimate of organic demand.
 
-- [x402 Documentation](https://www.x402.org/) - Protocol overview and ecosystem
-- [x402 GitHub](https://github.com/coinbase/x402) - Specification, SDKs, and examples
-- [x402 Specification](https://github.com/coinbase/x402/tree/main/specs) - Technical spec
-- [Coinbase Developer Docs](https://docs.cdp.coinbase.com/x402/welcome) - Quickstart guide
+- [x402 Documentation](https://docs.x402.org/introduction) - Foundation documentation, SDK support, and migration guides
+- [x402 GitHub](https://github.com/x402-foundation/x402) - Canonical specification, SDKs, and examples; `coinbase/x402` is a fork
+- [x402 Specification](https://github.com/x402-foundation/x402/tree/main/specs) - Technical spec
+- [x402 Upto](https://docs.x402.org/schemes/upto) - Authorize a maximum and settle the actual cost of a request
+- [x402 Batch Settlement](https://docs.x402.org/schemes/batch-settlement) - Batch settlement implementation guidance
+- [x402 Signed Offers and Receipts](https://docs.x402.org/extensions/offer-receipt) - Signed offer and receipt extension
+- [Coinbase Developer Docs](https://docs.cdp.coinbase.com/x402/welcome) - Coinbase-specific implementation guide
 - [Linux Foundation: x402 Foundation Operational Launch](https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications) - July 14, 2026, 40 founding members
 - [Cloudflare: Launching the x402 Foundation](https://blog.cloudflare.com/x402/) - Cloudflare Blog
 - [Cloudflare and AWS Embed x402 at the Edge](https://www.infoq.com/news/2026/07/cloudflare-aws-x402-micropayment/) - InfoQ, July 2026
 - [Coinbase Agent.market](https://cryptonews.com/news/coinbase-x402-ai-agent-app-store-crypto-payments/) - x402-paywalled AI agent app store
-- [CoinDesk: Demand Is Just Not There Yet](https://www.coindesk.com/markets/2026/03/11/coinbase-backed-ai-payments-protocol-wants-to-fix-micropayment-but-demand-is-just-not-there-yet) - Sober look at real x402 volume
+- [CoinDesk: Demand Is Just Not There Yet](https://www.coindesk.com/markets/2026/03/11/coinbase-backed-ai-payments-protocol-wants-to-fix-micropayment-but-demand-is-just-not-there-yet) - March 11, 2026 reporting on transaction volume and its measurement limits
 - [Solana Integration Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) - Solana x402 integration
 - [Stellar x402 Facilitator](https://stellar.org/blog/foundation-news/x402-on-stellar) - Production facilitator on OpenZeppelin Relayer (sub-5s settlement)
 - [Pay.sh by Solana + Google Cloud](https://www.banklesstimes.com/articles/2026/05/06/solana-and-google-cloud-launch-pay-sh-for-ai-agent-micropayments/) - May 2026 stablecoin micropayment gateway for AI agents accessing Gemini, BigQuery, Vertex AI, and 50+ APIs
@@ -699,7 +707,7 @@ L402 combines Macaroons (bearer authorization tokens) with Lightning Network mic
 
 > L402 toolkit for AI agents — MCP server, CLI, Python SDK
 
-⚠️ **Appears dormant.** As of September 2026, `fewsats-mcp` was last updated in May 2025 and `L402-python` in January 2025 — roughly 16 and 20 months of inactivity, with very low engagement. Listed for completeness; verify maintenance status before depending on it.
+**Maintenance status:** Not reverified in the November review; check the repositories' recent activity and compatibility before depending on them. Inactivity alone does not establish abandonment.
 
 - [Fewsats MCP Server](https://github.com/fewsats/fewsats-mcp) - MCP server for AI agent L402 payments
 - [L402 Python SDK](https://github.com/Fewsats/L402-python) - Python SDK for L402 agent payments
@@ -719,11 +727,13 @@ An open-source x402 implementation with no backend, database, or protocol fee: p
 
 ## Fiat Payment Rails
 
+EMVCo's draft **Agentic Payments – Framework for Specifications** introduces **Intent Services** for registering and managing consumer-authorized intent through a transaction lifecycle. The [September announcement](https://www.emvco.com/news-publications/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/) opened public review; the [November 10 update](https://www.emvco.com/news-publications/advancing-secure-agentic-payments-highlights-from-the-emvco-hanoi-board-of-advisors-meeting/) reports feedback being considered. This is standards-development work, not a completed specification or a claim of network deployment.
+
 ### 🤝 Cross-Network Interoperability (KYA)
 
 > Ant International + Mastercard + Visa, September 9–10, 2026
 
-The three networks running competing agent-identity schemes — **Visa Trusted Agent Protocol (TAP)**, **Mastercard Verifiable Intent**, and **Ant International's AMP** — began collaborating on a shared **Know-Your-Agent (KYA)** interoperability framework. This is the first serious attempt to stop agent identity fragmenting along network lines.
+Ant International, Mastercard, and Visa announced collaboration on a shared **Know-Your-Agent (KYA)** interoperability framework across their agentic commerce initiatives.
 
 **What it does:** establishes shared principles so common trust signals are recognized across card networks, wallet ecosystems, agent platforms, and marketplaces, while each network keeps its own verification and decisioning. The goal is to cut duplicate agent identity verification and integration cost.
 
@@ -748,7 +758,7 @@ Visa's TAP provides the authentication layer for AI agents to interact with card
 
 - [Intelligent Commerce Developer Program](https://developer.visa.com/capabilities/visa-intelligent-commerce) - Visa agent commerce program
 - [Trusted Agent Protocol (TAP)](https://developer.visa.com/capabilities/trusted-agent-protocol) - TAP documentation
-- [TAP GitHub](https://github.com/visa/trusted-agent-protocol) - Reference implementation and spec — ⚠️ last updated October 2025; the protocol shipped commercially while this repo went quiet, so prefer the developer portal above for current detail
+- [TAP GitHub](https://github.com/visa/trusted-agent-protocol) - Reference implementation and spec; consult the developer portal for integration availability
 - [Visa Launches Validator Node on Tempo](https://investor.visa.com/news/news-details/2026/Visa-Launches-Validator-Node-on-Tempo-Blockchain/default.aspx) - April 14, 2026 — Visa runs validator on Stripe's Tempo chain (TradFi/DeFi crossover)
 - [Visa Agentic Ready Expands to Canada](https://www.globenewswire.com/news-release/2026/05/05/3287953/0/en/Visa-Expands-Agentic-Ready-Program-to-Canada-to-Advance-AI-Driven-Commerce.html) - May 5, 2026 — BMO, CIBC, RBC, Scotiabank, TD as early adopters
 - **July 2026:** Visa became a premier member of the [x402 Foundation](#x402) at its operational launch
@@ -758,9 +768,11 @@ Visa's TAP provides the authentication layer for AI agents to interact with card
 
 > Agentic Tokens — scoped, time-limited payment credentials for AI agents
 
-Mastercard Agent Pay issues Agentic Tokens: scoped, time-limited credentials that allow agents to initiate payments within defined boundaries. Authentication is built on [Web Bot Auth](#web-bot-auth). Includes an official MCP server for API access. Agent Pay entered phased rollout through 2025 and is broadly available via Mastercard-certified processors in 2026.
+Mastercard Agent Pay issues Agentic Tokens: scoped, time-limited credentials that allow agents to initiate payments within defined boundaries. Authentication is built on [Web Bot Auth](#web-bot-auth). Consult the developer documentation for supported integrations and availability; the separate Agent Pay for Machines program is described below.
 
-#### Agent Pay for Machines (June 10, 2026)
+#### Agent Pay for Machines
+
+**Availability:** Announced June 10, 2026; [developer Early Access announced October 20](https://www.mastercard.com/uz/uz/news-and-trends/press/2026/october/Mastercard-Agent-Pay-for-Machines-in-action.html), with buyer/seller APIs, a toolkit, sandbox, and documentation. Early Access does not establish general availability.
 
 A distinct product for the machine-to-machine end of the spectrum: high-velocity, low-value, and micro-transactions executed programmatically at machine speed. Four capabilities:
 
@@ -769,32 +781,35 @@ A distinct product for the machine-to-machine end of the spectrum: high-velocity
 - **Transacting** — verified participants connect across providers for continuous automated commerce
 - **Settling** — multi-rail settlement across cards, accounts, and **stablecoins**
 
-Notably, Mastercard states compatibility with the **x402** open standard. Backed by 30+ partners including Adyen, Stripe, Coinbase, Cloudflare, Solana Foundation, OKX, and Polygon. This puts Mastercard in direct overlap with [MPP](#mpp---machine-payments-protocol) and [x402](#x402) rather than alongside them.
+Mastercard's launch announcement states compatibility with **x402** and describes participating partners. Compatibility, partner participation, and production availability are separate claims.
 
 - [Agent Pay Developer Docs](https://developer.mastercard.com/mastercard-checkout-solutions/documentation/use-cases/agent-pay/) - Integration documentation
 - [Mastercard Launches Agent Pay for Machines](https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Launches-Agent-Pay-for-Machines-to-Unlock-Super-Fast-Always-On-Payments/default.aspx) - June 10, 2026 — machine-speed micropayments, x402-compatible, multi-rail settlement
-- [Mastercard Launches Agent Suite](https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Launches-Agent-Suite-to-Ready-Enterprises-for-a-New-Era/default.aspx) - January 27, 2026 — Enterprise toolkit bundling Agent Pay with deployment tools. The announcement states it "will be available in the second quarter of this year"; ⚠️ no subsequent GA confirmation located as of September 2026, so treat availability as unverified rather than shipped.
-- [Mastercard Verifiable Intent (contributed to FIDO Alliance)](https://www.pymnts.com/artificial-intelligence-2/2026/google-and-mastercard-contribute-agentic-commerce-standards-to-fido-alliance/) - April 28, 2026 — Co-developed with Google, designed to work with AP2
+- [Mastercard Launches Agent Suite](https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Launches-Agent-Suite-to-Ready-Enterprises-for-a-New-Era/default.aspx) - January 27, 2026 announcement of an enterprise toolkit targeting Q2 availability; subsequent general availability was not independently confirmed in the November review
+- [Verifiable Intent](https://verifiableintent.dev) - Specification and verification model for authorization and delegation evidence
+- [Verifiable Intent GitHub](https://github.com/agent-intent/verifiable-intent) - Draft v0.1 maintained by Mastercard; credential formats, constraints, verification procedures, Python examples, and tests
+- [FIDO: AP2 and Verifiable Intent](https://fidoalliance.org/building-the-trust-layer-for-agentic-payments-with-ap2-and-verifiable-intent/) - Contribution to FIDO standards work, distinct from a completed FIDO standard
 - **September 2026:** Mastercard joined Visa and Ant International on the [KYA interoperability framework](#-cross-network-interoperability-kya)
 
 ### American Express — Agentic Commerce Experiences (ACE)
 
-> Developer kit + Agent Purchase Protection — first card network with consumer-facing dispute coverage for agent errors
+> Developer kit, intent evidence, scoped credentials, and Agent Purchase Protection
 
 **Launched:** April 14, 2026
 **Partners:** OpenAI, Google, Microsoft, PayPal, Stripe + 11 others
 
-Amex ACE is a developer kit with five components: agent registration, account enablement, intent intelligence (creating an "intent contract" + Proof of Intent Token), single-use payment credentials bound to intent and constraints, and cart context (banks/brands compare submitted cart vs. intent). Pairs with **Amex Agent Purchase Protection** — industry-first coverage for charges arising from AI agent errors when both card member and merchant acted correctly.
+Amex ACE combines agent registration, account enablement, intent intelligence, scoped payment credentials, and cart context. The October 13 **Intent Intelligence framework** describes an Intent ID, Proof of Intent Token, and credentials tied to the authorized purchase. Agent Purchase Protection is a separate program whose coverage depends on its terms.
 
 - [American Express Debuts ACE Developer Kit](https://www.digitalcommerce360.com/2026/04/14/american-express-agentic-commerce-developer-kit-purchase-protection/) - DigitalCommerce360 coverage of launch
 - [PYMNTS: Amex to Back Purchases by Customer's AI Agents](https://www.pymnts.com/artificial-intelligence-2/2026/american-express-to-back-purchases-made-by-customers-ai-agents/) - Coverage of Agent Purchase Protection
 - [Amex Agentic Commerce Hub](https://www.americanexpress.com/en-us/company/agentic-commerce/) - Official Amex page (primary source)
+- [Amex Intent Intelligence Framework](https://www.americanexpress.com/en-us/newsroom/technology-innovation/intent-intelligence-framework-agentic-commerce/) - October 13, 2026 explanation of intent evidence and scoped credentials
 
 ### PayPal — Agent Ready
 
 > ACP-based agent payments for existing PayPal and Braintree merchants
 
-PayPal's Agent Ready enables existing merchants to accept agent-initiated payments with minimal integration overhead. PayPal manages security and PCI compliance. Includes Store Sync for catalog integration and an Agent Toolkit for programmatic access.
+PayPal's Agent Ready provides agent-initiated payment integration for existing merchants. Store Sync covers catalog integration, and the Agent Toolkit provides programmatic access. Consult the integration documentation for security and compliance responsibilities.
 
 - [Agentic Commerce Overview](https://docs.paypal.ai/growth/agentic-commerce/overview) - PayPal agentic commerce docs
 - [Agent Ready Documentation](https://docs.paypal.ai/growth/agentic-commerce/agent-ready) - Agent Ready integration guide
@@ -803,11 +818,11 @@ PayPal's Agent Ready enables existing merchants to accept agent-initiated paymen
 
 ### Cloudflare — Agents SDK
 
-> Infrastructure SDK with native x402 support and upcoming Visa/Mastercard agent protocol integration
+> Infrastructure SDK with x402 support and announced Visa/Mastercard integration plans
 
 Cloudflare's Agents SDK embeds payment rails directly into the edge infrastructure layer, currently supporting x402. Cloudflare is also the originator of [Web Bot Auth](#web-bot-auth), the agent-identity layer beneath both Visa TAP and Mastercard Agent Pay.
 
-⚠️ **Status caveat:** Cloudflare announced in October 2025 that it would bring Visa TAP and Mastercard Agent Pay support "directly to the Agents SDK" over the coming months. As of the post's most recent revision (July 2026) that integration is still described as forthcoming — treat native TAP/Agent Pay support in the SDK as not yet shipped.
+**Status caveat:** Cloudflare's October 2025 announcement described planned Visa TAP and Mastercard Agent Pay support in the Agents SDK. The announcement alone does not establish delivery; native SDK availability for those integrations was not independently confirmed in the November review.
 
 - [Agents SDK Documentation](https://developers.cloudflare.com/agents/) - Full SDK docs
 - [x402 Integration](https://developers.cloudflare.com/agents/x402/) - x402 in the Agents SDK
@@ -876,13 +891,13 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 - [AGENTS.md](https://agents.md/) - Convention for giving coding agents project context; an AAIF founding project
 - [OAuth 2.0](https://oauth.net/2/) - Authorization framework used by UCP identity linking
 - [HTTP Message Signatures (RFC 9421)](https://www.rfc-editor.org/rfc/rfc9421.html) - Signature scheme underlying Visa TAP and Web Bot Auth
-- [EIP-3009](https://eips.ethereum.org/EIPS/eip-3009) - Transfer-with-authorization primitive underpinning x402 and MPP off-chain authorization
+- [EIP-3009](https://eips.ethereum.org/EIPS/eip-3009) - Transfer-with-authorization primitive used by some EVM payment implementations; not a universal requirement of MPP
 
 <br>
 
 ## Learning Resources
 
-### 📖 Official Guides
+### 📖 Community Guides
 
 - [UCP Complete Guide](https://a2aprotocol.ai/blog/2026-universal-commerce-protocol) - 2026 UCP overview — predates the v2026-08-25 breaking changes
 - [A2A Complete Guide](https://a2aprotocol.ai/blog/2025-full-guide-a2a-protocol) - 2025 A2A overview — ⚠️ pre-v1.0; check against the [current spec](https://a2a-protocol.org/latest/specification/)
@@ -917,9 +932,11 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 #### Google
 - [Gemini Enterprise for CX](https://www.googlecloudpresscorner.com/2026-01-11-Google-Cloud-Brings-Shopping-and-Customer-Service-Together-with-Gemini-Enterprise-for-Customer-Experience) - Official press release (Jan 2026)
 - [NRF 2026 Remarks](https://blog.google/company-news/inside-google/message-ceo/nrf-2026-remarks/) - Google CEO message on AI platform shift
+- [Google UCP Checkout in Canada](https://blog.google/intl/en-ca/products/explore-get-answers/a-new-way-to-shop-introducing-a-more-intuitive-agentic-shopping-experience-for-consumers-and-retailers-in-canada/) - November 4, 2026 rollout for eligible retailers; Merchant Center simplification is described as starting in 2027
 
 #### OpenAI
-- [Powering Product Discovery in ChatGPT](https://openai.com/index/powering-product-discovery-in-chatgpt/) - Pivot from Instant Checkout to discovery (March 2026)
+- [Powering Product Discovery in ChatGPT](https://openai.com/index/powering-product-discovery-in-chatgpt/) - March 24, 2026 update on discovery and merchant-controlled checkout
+- [Businesses in ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/) - November 10, 2026 beta for eligible US businesses, including profiles, product feeds, and Business Agents; a product announcement, not an ACP version change
 
 #### Microsoft
 - [Microsoft Agentic AI for Retail](https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/) - Copilot Checkout, Brand Agents, Dynamics 365
@@ -929,18 +946,20 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 - [DC360: Anthropic Debuts Claude Features Focused on Agentic Commerce](https://www.digitalcommerce360.com/2026/09/02/anthropic-debuts-claude-features-focused-on-agentic-commerce/) - Launch coverage; early users include Shopify, Visa, Mastercard, Accenture
 - [PYMNTS: Anthropic Built the Shopping Brain and Skipped the Wallet](https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-built-the-shopping-brain-and-skipped-the-wallet/) - Analysis of the deliberate payment-layer omission
 - [Claude Marketplace Launch](https://siliconangle.com/2026/03/06/anthropic-launches-claude-marketplace-third-party-cloud-services/) - Third-party services in Claude (Snowflake, GitLab, Harvey AI, Replit, Lovable Labs), March 2026
-- [Project Deal: Agent-to-Agent Commerce Experiment](https://www.anthropic.com/features/project-deal) - 69-employee marketplace pilot, 186 deals, $4K GMV — first published study on how model quality affects negotiation outcomes
+- [Project Deal: Agent-to-Agent Commerce Experiment](https://www.anthropic.com/features/project-deal) - Marketplace experiment studying how model quality affects negotiation outcomes
 
 #### Shopify
+- [Shop MCP](https://shopify.dev/changelog/posts/add-shopping-and-shop-pay-checkout-to-any-agent-with-shop-mcp) - October 13, 2026 announcement of catalog, cart, and Shop Pay checkout access through MCP
 - [Spring '26 Edition for Developers](https://www.shopify.com/news/spring-26-edition-dev) - **June 2026** — UCP opens to every developer with no approval gate; agents self-register a profile in the Developer Dashboard and call the public MCP endpoint
 - **Web Bot Auth enforcement (May 2026)** — Shopify applies stricter Storefront API rate limits to bots and agents; unsigned traffic gets the strictest tier, so agent operators must sign requests with [Web Bot Auth](#web-bot-auth) to qualify for higher limits. Affects Hydrogen storefronts and Storefront MCP integrations.
 - **Agentic Storefronts admin surface** — a dedicated *Sales channels → Agentic* page showing which queries products rank for inside ChatGPT and Microsoft Copilot, sales attributed to AI channels, and product-data recommendations
 - [Shopify API Rate Limits](https://shopify.dev/docs/api/usage/limits) - Current limit tiers, including the bot and agent tiers
 
 #### Meta
+- [Muse Personal AI Agent](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) - September 8, 2026 launch, updated November 10; purchases require user confirmation. The announcement does not establish ACP use or identify Muse as the previously reported Hatch project
 - [TechCrunch: Zuckerberg Teases Agentic Commerce](https://techcrunch.com/2026/01/28/zuckerberg-teases-agentic-commerce-tools-and-major-ai-rollout-in-2026/) - Meta Q4 earnings reveals 2026 AI roadmap
-- [eMarketer: Meta Readies AI Shopping Agents for Instagram](https://www.emarketer.com/content/meta-readies-ai-shopping-agents-instagram-rival-tiktok-shop) - Shopping agent targeted for Instagram ahead of Q4 2026
-- [The Information: Meta's 'Hatch' Agent and Instagram Shopping Tool](https://www.theinformation.com/articles/meta-building-ai-agent-called-hatch-agentic-shopping-tool-instagram) - Reporting on Meta's internal agent effort
+- [eMarketer: Meta Readies AI Shopping Agents for Instagram](https://www.emarketer.com/content/meta-readies-ai-shopping-agents-instagram-rival-tiktok-shop) - Historical reporting on a planned Instagram shopping agent; not confirmation of delivery
+- [The Information: Meta's 'Hatch' Agent and Instagram Shopping Tool](https://www.theinformation.com/articles/meta-building-ai-agent-called-hatch-agentic-shopping-tool-instagram) - Historical reporting on Meta's internal agent effort
 
 #### Amazon
 - **Rufus retired May 13, 2026**, replaced by **Alexa for Shopping** — a unified assistant across the Shopping app, Amazon.com, and Echo Show. Material written before May 2026 referring to "Rufus" describes a discontinued brand.
@@ -951,14 +970,7 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 
 ## Market Sizing
 
-Forecasts vary by almost an order of magnitude. Worth citing the spread rather than a single headline number.
-
-| Source | Forecast | Scope |
-|--------|----------|-------|
-| **McKinsey** | **$3–5 trillion by 2030** | Global consumer commerce orchestrated by agents — the figure now cited by Visa, Mastercard, and Ant International |
-| **McKinsey / ICSC** | $1 trillion by 2030 | US B2C agentic sales |
-| **Bain** | $300–500 billion by 2030 | 15–25% of overall e-commerce |
-| **Morgan Stanley** | $190–385 billion by 2030 | 10–20% of US online retail |
+Forecasts use different geographies and definitions of agent influence. The links below are research leads, not a comparable market-size series; check each original report's geography, target year, denominator, and methodology before reusing its estimate. The November review did not independently revalidate these forecasts.
 
 - [McKinsey: Up to $5 Trillion in Agentic Commerce Sales by 2030](https://www.digitalcommerce360.com/2025/10/20/mckinsey-forecast-5-trillion-agentic-commerce-sales-2030/) - The global forecast
 - [ICSC + McKinsey: $1T US Agentic Sales by 2030](https://www.paymentsdive.com/news/agentic-commerce-us-one-trillion-2030/819490/) - US B2C forecast
@@ -968,31 +980,30 @@ Forecasts vary by almost an order of magnitude. Worth citing the spread rather t
 
 ## Regulatory Landscape
 
-> Rules are lagging the technology. Regulators are mostly publishing guidance and foresight papers rather than binding rules, which leaves liability allocation unsettled.
+> Distinguish enacted requirements, proposed rules, official guidance, and commentary. The sources below address different jurisdictions and legal questions.
 
-**The open question everywhere:** when an agent makes a purchase the user did not intend, who is liable — the agent platform, the merchant, the issuer, or the consumer? No jurisdiction answers this cleanly today. This is precisely the gap that AP2 mandates, Amex Agent Purchase Protection, and the KYA framework are each attempting to fill from the private-sector side.
+Authorization records can inform disputes, but a protocol's signature or mandate does not by itself determine liability among the agent platform, merchant, payment provider, and consumer.
 
 ### European Union
-- **EU AI Act** — obligations for high-risk AI systems take full effect **August 2026**. Relevant to agents making consequential financial decisions on a user's behalf.
-- [Agent Payments Protocol — EU Perspective](https://agentpaymentsprotocol.eu/) - AP2, trust, and the European regulatory frame
+- **High-risk timelines:** The Commission's [AI Omnibus publication](https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force) reports entry into force on July 27, 2026 and gives **December 2, 2027 for Annex III high-risk systems** and **August 2, 2028 for high-risk systems embedded in regulated products**. These dates are attributed to the Commission; the audit could not independently inspect the linked legislative text. Do not conflate them with the Act's other applicability dates
+- [EU AI Act Implementation](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) - Official overview and phased obligations
+- [Commission High-Risk Classification Guidance](https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems) - Classification depends on intended use and the applicable category; a shopping agent is not automatically high-risk
 
 ### United States
-- **FTC** — commissioners have issued policy statements under Section 5 warning platforms against configuring agents to manipulate purchasing recommendations toward hidden commercial objectives
-- **CFPB** — Regulation E is the pressure point; an advance notice of proposed rulemaking on personal financial data rights raised the question of who may act as a consumer's "representative"
-- [Agentic AI Retail Regulation 2026: The FTC Guide](https://ucphub.ai/agentic-ai-retail-regulation-2026-the-ftc-guide-to-washingtons-cua-rules/) - Overview of US enforcement posture
+- [CFPB Personal Financial Data Rights Reconsideration](https://www.consumerfinance.gov/rules-policy/rules-under-development/personal-financial-data-rights-reconsideration/) - August 22, 2025 advance notice under Dodd-Frank Section 1033, including questions about consumer representatives; this is not an agent-specific Regulation E rule or a resolution of payment-error liability
 
 ### ⚖️ Case Law: *Amazon v. Perplexity* (Ninth Circuit, August 4, 2026)
 
-The most consequential legal development in agentic commerce so far — it addresses whether a platform can block agents acting for its own users.
+This preliminary-injunction decision addresses access by Perplexity's Comet agent on the record presented to the court.
 
-**Holding:** The Ninth Circuit **vacated** the preliminary injunction that had barred Perplexity's Comet agent from accessing Amazon.com on customers' behalf. Because traffic was routed through the *user's* computer rather than Perplexity's servers talking directly to Amazon's, the court found it was **the user who "accessed" Amazon's computers, with the help of Perplexity's agent**. "Access" under the CFAA means entering a computer system, and contemplates access by a person — not a software tool. Amazon therefore could not establish the CFAA "access" element.
+**Holding:** The Ninth Circuit **vacated the preliminary injunction and remanded**. On that record, it treated the user as accessing Amazon with Comet's assistance and found Amazon had not established the CFAA access element against Perplexity. Routing through the user's computer was material to the analysis. [Court opinion, August 4, 2026](https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/04/26-1444.pdf).
 
 **What it does *not* settle:**
 - Other theories remain live — breach of contract, terms-of-service violations, and tort claims
 - Agents with greater autonomy, or **direct server-to-server** communication, may land differently — the routing-through-the-user fact was load-bearing
 - This was the preliminary-injunction stage only; the merits are unresolved
 
-**Why it matters for protocol design:** the ruling's logic favors *client-side, user-routed* agents over server-side ones. That cuts across the architecture choices in this list — [WebMCP](#webmcp---browser-native-agent-tools) and browser-resident agents sit on the favorable side of that line; server-to-server commerce integrations do not necessarily.
+**Architectural inference:** Request routing and the user's role may matter to a similar analysis. The opinion did not adjudicate WebMCP, categorically authorize browser-resident agents, or resolve the legality of server-to-server commerce integrations.
 
 - [Cooley: Ninth Circuit Rules on AI Agent Access Under the CFAA](https://www.cooley.com/news/insight/2026/2026-08-06-ninth-circuit-rules-on-ai-agent-access-to-third-party-websites-under-cfaa) - Legal analysis of the holding
 - [Jones Day: Authorized by the User, Blocked by the Platform](https://www.jonesday.com/en/insights/2026/05/authorized-by-the-user-blocked-by-the-platform-testing-the-legal-limits-of-ai-agents) - The underlying legal question
@@ -1012,7 +1023,7 @@ The most consequential legal development in agentic commerce so far — it addre
 
 ### 📚 Awesome Lists
 
-- [Awesome UCP](https://github.com/Upsonic/awesome-ucp) - Curated UCP resources — ⚠️ last updated February 2026, so it predates the April and August spec releases
+- [Awesome UCP](https://github.com/Upsonic/awesome-ucp) - Community-curated UCP resources; check examples against the current specification
 - [Awesome Agentic Patterns](https://github.com/nibzard/awesome-agentic-patterns) - Agentic AI patterns
 - [Awesome Agentic Commerce](https://github.com/damoahdominic/awesome-agentic-commerce/) - Agentic commerce protocols resources
 - [Awesome Agent Payments Protocol](https://github.com/unnamedaiagent/awesome-agent-payments-protocol) - Curated AP2, A2A, and x402 resources
@@ -1045,120 +1056,20 @@ The most consequential legal development in agentic commerce so far — it addre
 
 ## Adopters & Partners
 
-> ⚠️ **These lists are dated snapshots, not live rosters.** Partner counts and membership move faster than this list can track — treat them as "at least these, as of the date given" and check the protocol's own site for the current roster.
+Maintainers, foundation members, endorsers, and production implementers have different roles. Use the primary sources below for the named relationship and publication date; membership or endorsement alone does not establish an operational integration.
 
-### UCP Governing Council
-- [x] Google (permanent)
-- [x] Shopify (permanent)
-- [x] Stripe (permanent, joined April 2026)
-- [x] Two elected open seats
+| Project or initiative | Primary source | What it establishes |
+| --- | --- | --- |
+| UCP | [Official announcements](https://ucp.dev/documentation/announcements/) | Dated governing and domain-council announcements; consult each notice for its roster |
+| ACP | [Lead maintainers](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/MAINTAINERS.md) | OpenAI, Stripe, and Meta at the pinned revision; not a list of downstream adopters |
+| AP2 | [Official documentation](https://ap2-protocol.org/) and [FIDO standards work](https://fidoalliance.org/building-the-trust-layer-for-agentic-payments-with-ap2-and-verifiable-intent/) | Protocol ecosystem and contribution to standardization; implementation support must be checked separately |
+| A2A | [Linux Foundation one-year update](https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year) | Dated April 2026 ecosystem report |
+| AAIF | [Foundation website](https://aaif.io/) | Foundation projects and membership, distinct from commerce protocol adoption |
+| x402 Foundation | [Operational launch announcement](https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications) | Founding membership as announced July 14, 2026 |
+| Cross-network KYA | [Joint announcement](https://www.businesswire.com/news/home/20260909003891/en/Ant-International-Mastercard-and-Visa-Initiate-Collaboration-on-Know-Your-Agent-Interoperability-to-Scale-Agentic-Commerce) | Ant International, Mastercard, and Visa's September 2026 collaboration announcement |
+| Banking principles | [Building Trust in Agentic Commerce](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/global-banks-collaborate-on-principles-for-trusted-agentic-comme.html) | Six banks' September 22, 2026 industry principles; not a certification of protocol support |
 
-### UCP Co-Developers
-- [x] Google
-- [x] Shopify
-- [x] Etsy
-- [x] Wayfair
-- [x] Target
-- [x] Walmart
-
-### UCP Technical Committee (16 seats)
-Includes representatives from Amazon, Meta, Microsoft, Salesforce, and Stripe alongside the founding organizations.
-
-### UCP Domain Technical Councils
-**Food** (July 2026): Block (Square), DoorDash, Google, Toast, Uber Eats
-**Lodging** (August 2026): Amadeus, Booking.com, Expedia, Google, Hilton, Marriott, Trip.com
-**Payments** (September 2026): Adyen, Ant International, Coinbase, Global Payments, Google, PayPal, Shopify, Stripe
-
-### UCP Endorsers
-
-20+ endorsing partners at the January 2026 launch, including:
-
-- [x] Adyen
-- [x] American Express
-- [x] Best Buy
-- [x] Flipkart
-- [x] Kroger
-- [x] Lowe's
-- [x] Macy's
-- [x] Mastercard
-- [x] Papa Johns
-- [x] Sephora
-- [x] Stripe
-- [x] The Home Depot
-- [x] Visa
-- [x] Woolworths
-- [x] Zalando
-
-Named as implementing partners after launch: Stripe, Salesforce, Commerce Inc.
-
-### ACP Partners
-- [x] OpenAI
-- [x] Stripe
-- [x] Microsoft Copilot
-- [x] Anthropic
-- [x] Perplexity
-- [x] Salesforce
-- [x] Vercel
-- [x] Replit
-- [x] Fiserv (Mastercard Agent Pay integration)
-
-### AP2 Payment Partners
-
-60+ at the September 2025 launch, 100+ by late October 2025. Includes:
-
-- [x] Mastercard
-- [x] Visa
-- [x] American Express
-- [x] PayPal
-- [x] Adyen
-- [x] Coinbase
-- [x] Revolut
-- [x] Worldpay
-
-### A2A Supporters
-- [x] Agentic AI Foundation / Linux Foundation (governance since August 2026)
-- [x] Google (original creator)
-- [x] 150+ organizations
-- [x] Atlassian
-- [x] MongoDB
-- [x] ServiceNow
-- [x] Salesforce
-- [x] SAP
-- [x] Cloud platforms: Google Cloud, AWS, Microsoft Azure
-
-### Agentic AI Foundation (MCP + A2A) — Platinum Members
-- [x] Amazon Web Services
-- [x] Anthropic
-- [x] Block
-- [x] Bloomberg
-- [x] Cloudflare
-- [x] Google
-- [x] Microsoft
-- [x] OpenAI
-
-Gold members include Adyen, Cisco, Datadog, Docker, IBM, Okta, Oracle, Salesforce, SAP, Shopify, Snowflake, and Twilio.
-
-### x402 Foundation — Founding Members
-40 organizations at operational launch (July 2026), 17 of them premier — including Visa, Stripe, and the Solana Foundation, alongside Adyen, AWS, American Express, Circle, Cloudflare, Coinbase, Google, Mastercard, Microsoft, and Shopify.
-
-### AMP Phase I Partners
-**Wallets:** 10 Alipay+ digital wallets (~1.5B user accounts)
-**Acquirers:** Adyen, Allinpay, Checkout.com, Fiserv, Global Payments, Nuvei, Worldline
-
-### Visa Agentic Ready
-
-**Europe:** Barclays, HSBC UK, Banco Santander, Revolut, Commerzbank, Nationwide, Nexi, Raiffeisen, DZ Bank — 21+ issuers enrolled
-**Canada (May 2026):** BMO, CIBC, RBC, Scotiabank, TD
-**APAC + LatAm:** 85+ partners (incl. Alliance Bank Malaysia, CIMB, Maybank)
-
-### Other Agentic Commerce Platforms
-- [x] Amazon (Alexa for Shopping — **replaced Rufus on May 13, 2026**; Buy for Me for off-Amazon purchases) — maintains a walled garden against third-party agents, though the Ninth Circuit [vacated its injunction against Perplexity](#-case-law-amazon-v-perplexity-ninth-circuit-august-4-2026) in August 2026
-- [x] Meta (ACP-based Facebook checkout live; "Hatch" agent and Instagram shopping agent targeted before Q4 2026)
-- [x] Microsoft (Copilot Checkout, Brand Agents)
-- [x] Tempo (MPP co-author, blockchain-based agent payments)
-- [x] Ant International (AMP, Alipay+ ecosystem — 1.8B users, 150M merchants)
-- [x] Anthropic (Claude Commerce Agents blueprint, Claude Marketplace, Project Deal experiment)
-- [x] Adyen (Adyen Agentic — multi-protocol integration layer)
+See [Platform Announcements](#-platform-announcements) for dated product developments and the individual protocol sections for implementation resources.
 
 ---
 
@@ -1181,4 +1092,4 @@ If you are affiliated with something you submit, say so in the pull request.
 
 This compilation is provided under the [MIT License](./LICENSE).
 
-The protocols themselves are Apache 2.0 licensed by their respective maintainers.
+Linked specifications and implementations have their own licenses; consult each project's license and applicable standards-body terms.
