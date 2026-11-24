@@ -892,6 +892,7 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 - [OAuth 2.0](https://oauth.net/2/) - Authorization framework used by UCP identity linking
 - [HTTP Message Signatures (RFC 9421)](https://www.rfc-editor.org/rfc/rfc9421.html) - Signature scheme underlying Visa TAP and Web Bot Auth
 - [EIP-3009](https://eips.ethereum.org/EIPS/eip-3009) - Transfer-with-authorization primitive used by some EVM payment implementations; not a universal requirement of MPP
+- [Universal Paper](https://universalpaper.org/) - Open, content-addressed language for group purchasing agreements, with signed events, offline verification and bounded mandates for agents; complementary to payment protocols, not built on them
 
 <br>
 
