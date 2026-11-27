@@ -872,6 +872,7 @@ Speaks UCP, ACP, AP2, and Meta's AI checkout. Strategic partners include America
 - [UCP Playground](https://ucp.dev/latest/specification/shopping/playground/) - Official testing environment
 - [UCP Checker](https://ucpchecker.com/) - Schema compliance validation
 - [UCP Lighthouse](https://ucp.rest/) - Payload validation
+- [AgentReady.market](https://www.agentready.market/) - Free audit of the path an AI shopping agent takes on a store (cart, checkout, price parity, after-sale contact), scored /100 from deterministic checks, with probes for the UCP agent endpoint, A2A Agent Card and ARD AI Catalog
 - [Merchant Directory](https://merchants.awesomeucp.com/) - UCP-enabled merchants
 
 ### 🤖 Agent Development
@@ -1041,6 +1042,7 @@ This preliminary-injunction decision addresses access by Perplexity's Comet agen
 - [UCP Checker Blog](https://ucpchecker.com/blog/) - Monthly "State of Agentic Commerce" reports with independent crawler data on UCP adoption
 - [agenticplug Protocol Tracker](https://agenticplug.ai/current-state-of-agentic-commerce) - Cross-protocol status and version tracker
 - [Agentic Commerce Report](https://agenticcommerce.report/) - Weekly industry newsletter archive
+- [AgentReady Census](https://www.agentready.market/census) - Monthly census of the stores in the AgentReady.market Index that AI shopping agents can buy on (169 of 363 in November 2026), open CSV
 
 ### 📬 Newsletters
 
