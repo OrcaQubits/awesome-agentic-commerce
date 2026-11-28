@@ -975,6 +975,7 @@ Forecasts use different geographies and definitions of agent influence. The link
 - [McKinsey: Up to $5 Trillion in Agentic Commerce Sales by 2030](https://www.digitalcommerce360.com/2025/10/20/mckinsey-forecast-5-trillion-agentic-commerce-sales-2030/) - The global forecast
 - [ICSC + McKinsey: $1T US Agentic Sales by 2030](https://www.paymentsdive.com/news/agentic-commerce-us-one-trillion-2030/819490/) - US B2C forecast
 - [Forrester: Agentic Payments in B2C Commerce — Where We Are Now](https://www.forrester.com/blogs/agentic-payments-in-b2c-commerce-where-we-are-now/) - Analyst reality check against the forecasts
+- [What AI Agents Buy Online](https://doi.org/10.5281/zenodo.24624920) - Empirical comparison of two x402 settlement indexes that report opposite changes in dollar volume over the same two months
 
 <br>
 
